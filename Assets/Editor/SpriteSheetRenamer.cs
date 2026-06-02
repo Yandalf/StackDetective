@@ -4,29 +4,33 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
-public class SpriteSheetRenamer : EditorWindow
+/// <summary>
+/// Editor tool for quickly renaming all sprites in a spritesheet following a scheme.
+/// </summary>
+public class SpritesheetRenamer : EditorWindow
 {
-    static readonly GUIContent _explanationLabel = new("Automatically renames sprites in a sprite sheet asset file following a given naming scheme. Use this to easily group sets of sprites in large sheets.");
-    static readonly GUIContent _spriteSheetLabel = new("Sprite Sheet", "Sprite Sheet asset of which the sub-sprites have to be renamed.");
+    static readonly GUIContent _explanationLabel = new("Automatically renames sprites in a spritesheet asset file following a given naming scheme.\nUse this to easily group sets of sprites in large sheets.");
+    static readonly GUIContent _spriteSheetLabel = new("Spritesheet", "Spritesheet Texture2D asset of which the sub-sprites have to be renamed.");
     static readonly GUIContent _subSpriteCountLabel = new("Sprite Count", "Sprites in the sheet.");
     static readonly GUIContent _spriteRowsColumnsLabel = new("Rows & Columns", "Rows and columns of sprites in the sheet.");
     static readonly GUIContent _spriteNameLabel = new("Sprites Name", "Name to give each sprite. Insert row and column numbers with {row} and {column}.");
     static readonly GUIContent _renameButtonLabel = new("Rename", "Rename all the sprites.");
+    
     private Texture2D _targetSpriteSheet;
     private Sprite[] _subSprites;
     private Vector2Int _spriteRowsColumns;
     private string _spriteName;
 
 
-    [MenuItem("Tools/Sprites/Sprite Sheet Renamer")]
+    [MenuItem("Tools/Sprites/Spritesheet Renamer")]
     private static void OpenWindow()
     {
         const float wndWidth = 400.0f;
         const float wndHeight = 200.0f;
         var pos = new Vector2(0.5f * (Screen.currentResolution.width - wndWidth),
                               0.5f * (Screen.currentResolution.height - wndHeight));
-        var window = GetWindow<SpriteSheetRenamer>();
-        window.titleContent = new GUIContent(ObjectNames.NicifyVariableName(nameof(SpriteSheetRenamer)));
+        var window = GetWindow<SpritesheetRenamer>();
+        window.titleContent = new GUIContent(ObjectNames.NicifyVariableName(nameof(SpritesheetRenamer)));
         window.position = new Rect(pos, new Vector2(wndWidth, wndHeight));
         window.Show();
     }
@@ -38,19 +42,8 @@ public class SpriteSheetRenamer : EditorWindow
         EditorGUI.BeginChangeCheck();
         _targetSpriteSheet = (Texture2D)EditorGUILayout.ObjectField(_spriteSheetLabel, _targetSpriteSheet, typeof(Texture2D), false);
         if (EditorGUI.EndChangeCheck())
-        {
-            if (_targetSpriteSheet == null)
-                _subSprites = new Sprite[0];
-            else
-            {
-                _subSprites = AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(_targetSpriteSheet))
-                    .Where(o => o is Sprite).Cast<Sprite>()
-                    .OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x)
-                    .ToArray();
-                Debug.Log(string.Join("\n", _subSprites.Select(s => s.name)));
-            }
-        }
-        EditorGUILayout.LabelField(_subSpriteCountLabel, new GUIContent(_subSprites?.Length.ToString() ?? "0"));
+			_subSprites = EditorSpriteUtilities.GetSpritesFromTexture2D(_targetSpriteSheet);
+		EditorGUILayout.LabelField(_subSpriteCountLabel, new GUIContent(_subSprites?.Length.ToString() ?? "0"));
         EditorGUI.BeginDisabledGroup(_subSprites == null || _subSprites.Length == 0);
         _spriteRowsColumns = EditorGUILayout.Vector2IntField(_spriteRowsColumnsLabel, _spriteRowsColumns);
         _spriteName = EditorGUILayout.TextField(_spriteNameLabel, _spriteName);

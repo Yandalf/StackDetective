@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.InputSystem.InputAction;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,18 +8,23 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb2D;
     public Animator animator;
 
+    private Vector2 _movementInput;
+
+
+    public void OnMove(CallbackContext context) 
+    {
+        _movementInput = context.ReadValue<Vector2>();
+    }
 
     void Update()
     {
-        var input = new Vector3(Input.GetAxisRaw(horizontalAxisName), Input.GetAxisRaw(verticalAxisName));
-        var movement = input.normalized * movementSpeed;
-        rb2D.linearVelocity = movement;
-        animator.SetFloat(horizontalAxisName, input.x);
-        animator.SetFloat(verticalAxisName, input.y);
-        if(input != Vector3.zero)
+        rb2D.linearVelocity = _movementInput.normalized * movementSpeed;
+        animator.SetFloat(horizontalAxisName, _movementInput.x);
+        animator.SetFloat(verticalAxisName, _movementInput.y);
+        if(_movementInput != Vector2.zero)
         {
-            animator.SetFloat(lastHorizontalAxisName, input.x);
-            animator.SetFloat(lastVerticalAxisName, input.y);
+            animator.SetFloat(lastHorizontalAxisName, _movementInput.x);
+            animator.SetFloat(lastVerticalAxisName, _movementInput.y);
         }
     }
 }
