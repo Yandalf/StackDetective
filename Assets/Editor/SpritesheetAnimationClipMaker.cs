@@ -12,10 +12,12 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 	static readonly GUIContent _explanationLabel = new("Automatically create animation clips for all sprites in a spritesheet following a set of example animation clips.\nThe example clips must be made using sprites of the same sheet.");
 	static readonly GUIContent _spriteSheetLabel = new("Spritesheet", "Spritesheet Texture2D asset from which to make new Animation Clips.");
 	static readonly GUIContent _sampleClipsLabel = new("Sample Animation Clips", "Animation Clips to create variations of for all other sprites in the spritesheet. Clips must be made using sprites from the spritesheet.");
+	static readonly GUIContent _copySuffixLabel = new("Copy Suffix", "Suffix to add to new animations. Add \"{0}\" to note where incrementing numbers must be written.");
 	static readonly GUIContent _generateButtonLabel = new("Generate Animation Clips");
 
 	public Texture2D targetSpriteSheet;
 	public AnimationClip[] sampleClips;
+	public string copySuffix;
 	//TODO add user controls that dictate how the tool searches for new sprite sets within the sheet to use for animations. Default to rows now.
 	private Sprite[] _subSprites;
 	private bool _spritesAndClipsMatch;
@@ -41,15 +43,20 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 		EditorGUILayout.Space(EditorGUIUtility.singleLineHeight);
 
 		EditorGUI.BeginChangeCheck();
+		EditorGUI.BeginChangeCheck(); //This is a bit ugly, but we only want to update subSprites and validate when either the sprite sheet or the animation clips change.
 		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(targetSpriteSheet)), _spriteSheetLabel);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(sampleClips)), _sampleClipsLabel);
 		if (EditorGUI.EndChangeCheck())
 		{
-			serializedObject.ApplyModifiedProperties();
+			serializedObject.ApplyModifiedProperties(); //Still need to reserialize here!
 			_subSprites = EditorSpriteUtilities.GetSpritesFromTexture2D(targetSpriteSheet);
 			_spritesAndClipsMatch = sampleClips?.Length > 0 && Validation_SheetContainsAnimationSprites(_subSprites, sampleClips);
 			//TODO filter out animation clips that don't affect sprites
 		}
+		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(copySuffix)), _copySuffixLabel);
+		if (EditorGUI.EndChangeCheck())
+			serializedObject.ApplyModifiedProperties();
+
 		EditorGUI.BeginDisabledGroup(!_spritesAndClipsMatch);
 		if (GUILayout.Button(_generateButtonLabel))
 		{
