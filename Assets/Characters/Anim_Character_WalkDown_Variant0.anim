@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Anim_Char0_WalkDown
+  m_Name: Anim_Character_WalkDown_Variant0
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
