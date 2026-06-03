@@ -58,6 +58,13 @@ public class SpritesheetRenamer : EditorWindow
         EditorGUI.EndDisabledGroup();
     }
 
+    /// <summary>
+    /// Get pairs of old and new names for each given sprite.
+    /// </summary>
+    /// <param name="sprites"></param>
+    /// <param name="spriteRowsColumns"></param>
+    /// <param name="formatString"></param>
+    /// <returns></returns>
     static Dictionary<string, string> GetSpriteNamePairs(Sprite[] sprites, Vector2Int spriteRowsColumns, string formatString)
     {
         var result = new Dictionary<string, string>(sprites.Length);

@@ -10,15 +10,19 @@ static public class EditorSpriteUtilities
 		if (texture == null)
 			return new Sprite[0];
 
-		return AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(texture))
-			.Where(o => o is Sprite).Cast<Sprite>()
-			.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x)
-			.ToArray();
+		return OrderSpritesByTexturePlacement(AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(texture))
+			.Where(o => o is Sprite).Cast<Sprite>().ToArray());
 	}
 
-	static public void LogSprites(Sprite[] sprites)
+	static public Sprite[] OrderSpritesByTexturePlacement(Sprite[] sprites)
 	{
-		Debug.Log(string.Join("\n",sprites.Select(s => s.name)));
+		return sprites.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x).ToArray();
+	}
+
+	static public void LogSprites(Sprite[] sprites, string leadingMessage = "")
+	{
+		var names = string.Join("\n", sprites.Select(s => s.name));
+		Debug.Log(string.IsNullOrEmpty(leadingMessage) ? names : $"{leadingMessage}\n{names}");
 	}
 
 	public static List<Sprite> GetSpritesFromClip(AnimationClip clip)
@@ -33,15 +37,17 @@ static public class EditorSpriteUtilities
 		return sprites;
 	}
 
+	//TODO this is now limited to Animation Clips modifying SpriteRenderer components. Does it make sense to allow component type configuration?
 	public static void ReplaceSpritesInClip(Dictionary<Sprite, Sprite> spriteReplacements, AnimationClip clip)
 	{
 		foreach (var binding in AnimationUtility.GetObjectReferenceCurveBindings(clip))
 		{
-			if (binding.type != typeof(Sprite))
+			if (binding.type != typeof(SpriteRenderer))
 				continue;
 			var keyframes = AnimationUtility.GetObjectReferenceCurve(clip, binding);
 			for (int i = 0; i < keyframes.Length; i++)
 				keyframes[i].value = spriteReplacements[(Sprite)keyframes[i].value];
+			AnimationUtility.SetObjectReferenceCurve(clip, binding, keyframes);
 		}
 	}
 }

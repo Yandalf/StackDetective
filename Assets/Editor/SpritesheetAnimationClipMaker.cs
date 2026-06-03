@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
@@ -16,6 +18,7 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 	public AnimationClip[] sampleClips;
 	//TODO add user controls that dictate how the tool searches for new sprite sets within the sheet to use for animations. Default to rows now.
 	private Sprite[] _subSprites;
+	private bool _spritesAndClipsMatch;
 
 
 	[MenuItem("Tools/Sprites/Spritesheet Animation Clip Maker")]
@@ -44,30 +47,66 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 		{
 			serializedObject.ApplyModifiedProperties();
 			_subSprites = EditorSpriteUtilities.GetSpritesFromTexture2D(targetSpriteSheet);
-			//TODO check if the animation clips are valid
+			_spritesAndClipsMatch = sampleClips?.Length > 0 && Validation_SheetContainsAnimationSprites(_subSprites, sampleClips);
+			//TODO filter out animation clips that don't affect sprites
 		}
-		EditorGUI.BeginDisabledGroup(false); //TODO use above validation here
+		EditorGUI.BeginDisabledGroup(!_spritesAndClipsMatch);
 		if (GUILayout.Button(_generateButtonLabel))
 		{
-			foreach(var clip in sampleClips)
+			var sampleClipSprites = EditorSpriteUtilities.OrderSpritesByTexturePlacement(
+				sampleClips.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().ToArray());
+			var spriteSets = GetSpriteSets(_subSprites, sampleClipSprites);
+			foreach (var clip in sampleClips)
 			{
 				var clipPath = AssetDatabase.GetAssetPath(clip);
-				//TODO allow for user to provide a naming scheme, or figure something clever out first.
-				var newClipPath = clipPath.Insert(clipPath.LastIndexOf('/') + 1, "COPY_");
-				var sprites = EditorSpriteUtilities.GetSpritesFromClip(clip);
-				EditorSpriteUtilities.LogSprites(sprites.ToArray());
-				if (AssetDatabase.CopyAsset(clipPath, newClipPath))
+				foreach (var set in spriteSets)
 				{
-					//TODO replace the sprites in the copied animations
-					AssetDatabase.SaveAssetIfDirty(new GUID(AssetDatabase.AssetPathToGUID(newClipPath)));
-					AssetDatabase.Refresh();
-				}
-				else
-				{
-					Debug.LogError($"Failed to create copy asset of {clipPath} at {newClipPath}");
+					//TODO allow for user to provide a naming scheme, or figure something clever out first.
+					var newClipPath = clipPath.Insert(clipPath.LastIndexOf('/') + 1, $"COPY_{set.Key}_");
+					if (AssetDatabase.CopyAsset(clipPath, newClipPath))
+					{
+						var spriteMap = sampleClipSprites.Zip(set.Value, (sample, sprite) => new { sample, sprite }).ToDictionary(item => item.sample, item => item.sprite);
+						EditorSpriteUtilities.ReplaceSpritesInClip(spriteMap, AssetDatabase.LoadAssetAtPath<AnimationClip>(newClipPath));
+						AssetDatabase.SaveAssetIfDirty(new GUID(AssetDatabase.AssetPathToGUID(newClipPath)));
+					}
+					else
+						Debug.LogError($"Failed to create copy asset of {clipPath} at {newClipPath}");
 				}
 			}
+			AssetDatabase.Refresh();
 		}
 		EditorGUI.EndDisabledGroup();
+	}
+
+	/// <summary>
+	/// Organize all the sprites into sets (simple rows for now)
+	/// </summary>
+	/// <param name="sprites"></param>
+	private Dictionary<int, Sprite[]> GetSpriteSets(Sprite[] sprites, Sprite[] sampleSprites)
+	{
+		var result = new Dictionary<int, Sprite[]>();
+		foreach(var sprite in sprites)
+		{
+			if (sampleSprites.Contains(sprite))
+				continue;
+			if (int.TryParse(Regex.Match(sprite.name, @"\d+").Value, out var index)) //Find the first number, which in our test case will be X in "CharX". TODO let users provide search patterns
+			{
+				if (result.ContainsKey(index))
+					result[index] = EditorSpriteUtilities.OrderSpritesByTexturePlacement(result[index].Append(sprite).ToArray());
+				else
+					result.Add(index, new Sprite[] { sprite });
+			} 
+		}
+		return result;
+	}
+
+	/// <summary>
+	/// Checks if every sprite in the animation clips is present in the given sheet sprites.
+	/// </summary>
+	/// <param name="sheetSprites">Sprites ripped from a texture sheet.</param>
+	/// <param name="animationClips">Animation clips to check.</param>
+	private bool Validation_SheetContainsAnimationSprites(Sprite[] sheetSprites, AnimationClip[] animationClips)
+	{
+		return animationClips?.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().All(s => ArrayUtility.IndexOf(sheetSprites, s) >= 0) ?? false;
 	}
 }
