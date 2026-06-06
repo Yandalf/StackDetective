@@ -11,20 +11,29 @@ static public class EditorSpriteUtilities
 			return new Sprite[0];
 
 		return OrderSpritesByTexturePlacement(AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(texture))
-			.Where(o => o is Sprite).Cast<Sprite>().ToArray());
+			.Where(o => o is Sprite).Cast<Sprite>().ToArray(), SpritesheetSetDirection.Rows);
 	}
 
-	static public Sprite[] OrderSpritesByTexturePlacement(Sprite[] sprites)
+	static public Sprite[] OrderSpritesByTexturePlacement(Sprite[] sprites, SpritesheetSetDirection setDirection)
 	{
-		return sprites.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x).ToArray();
+		if (setDirection == SpritesheetSetDirection.Rows)
+			return sprites.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x).ToArray();
+		else
+			return sprites.OrderBy(s => s.rect.position.x).ThenByDescending(s => s.rect.position.y).ToArray();
 	}
 
+	/// <summary>
+	/// Log all the Sprite names in a single formatted debug message.
+	/// </summary>
 	static public void LogSprites(Sprite[] sprites, string leadingMessage = "")
 	{
 		var names = string.Join("\n", sprites.Select(s => s.name));
 		Debug.Log(string.IsNullOrEmpty(leadingMessage) ? names : $"{leadingMessage}\n{names}");
 	}
 
+	/// <summary>
+	/// Retrieve all Sprites used in the given AnimationClip.
+	/// </summary>
 	public static List<Sprite> GetSpritesFromClip(AnimationClip clip)
 	{
 		var sprites = new List<Sprite>();
@@ -35,6 +44,23 @@ static public class EditorSpriteUtilities
 				sprites.Add((Sprite)frame.value);
 		}
 		return sprites;
+	}
+
+	/// <summary>
+	/// Sorts the given sprites into indexed sets.
+	/// </summary>
+	public static Dictionary<int, Sprite[]> OrderSpritesInSets(Sprite[] sprites, SpritesheetSetDirection setDirection)
+	{
+		var result = new Dictionary<int, Sprite[]>();
+		foreach (var sprite in sprites)
+		{
+			var index = GetSpriteSetIndex(sprite, setDirection);
+			if (result.ContainsKey(index))
+				result[index] = OrderSpritesByTexturePlacement(result[index].Append(sprite).ToArray(), setDirection);
+			else
+				result.Add(index, new Sprite[] { sprite });
+		}
+		return result;
 	}
 
 	//TODO this is now limited to Animation Clips modifying SpriteRenderer components. Does it make sense to allow component type configuration?
@@ -49,5 +75,19 @@ static public class EditorSpriteUtilities
 				keyframes[i].value = spriteReplacements[(Sprite)keyframes[i].value];
 			AnimationUtility.SetObjectReferenceCurve(clip, binding, keyframes);
 		}
+	}
+
+	/// <summary>
+	/// Gets the set index of the given sprite based on its position in the spritesheet.
+	/// </summary>
+	private static int GetSpriteSetIndex(Sprite sprite, SpritesheetSetDirection setDirection)
+	{
+		var origin = setDirection == SpritesheetSetDirection.Rows ? 
+			sprite.textureRect.y * -1 + sprite.texture.height - sprite.textureRect.height : //Recalculate because by default Unity lists sprites from top to bottom, but texture space is bottom to top
+			sprite.textureRect.x;
+		var axisSize = setDirection == SpritesheetSetDirection.Rows ? 
+			sprite.textureRect.size.y : 
+			sprite.textureRect.size.x;
+		return Mathf.FloorToInt(origin / axisSize);
 	}
 }

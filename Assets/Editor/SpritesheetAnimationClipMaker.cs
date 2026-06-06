@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEditor;
@@ -12,13 +12,16 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 	static readonly GUIContent _explanationLabel = new("Automatically create animation clips for all sprites in a spritesheet following a set of example animation clips.\nThe example clips must be made using sprites of the same sheet.");
 	static readonly GUIContent _spriteSheetLabel = new("Spritesheet", "Spritesheet Texture2D asset from which to make new Animation Clips.");
 	static readonly GUIContent _sampleClipsLabel = new("Sample Animation Clips", "Animation Clips to create variations of for all other sprites in the spritesheet. Clips must be made using sprites from the spritesheet.");
-	static readonly GUIContent _copySuffixLabel = new("Copy Suffix", "Suffix to add to new animations. Add \"{0}\" to note where incrementing numbers must be written.");
-	static readonly GUIContent _generateButtonLabel = new("Generate Animation Clips");
+	static readonly GUIContent _setDirectionLabel = new("Set Direction", "Direction of each set of Sprites in the spritesheet.");
+	static readonly GUIContent _copySuffixLabel = new("Copy Suffix", "Suffix to add to the names of the copies, then adds increment numbers at \"{0}\" (example: \"_Variant{0}\").");
+	static readonly GUIContent _subfoldersLabel = new("Put Clips in Subfolders", "The newly made clips will be placed in per-variant subfolders.");
+	static readonly GUIContent _generateButtonLabel = new("Make Animation Clips", "No, this does not use AI in any way! ;)");
 
 	public Texture2D targetSpriteSheet;
 	public AnimationClip[] sampleClips;
-	public string copySuffix;
-	//TODO add user controls that dictate how the tool searches for new sprite sets within the sheet to use for animations. Default to rows now.
+	public SpritesheetSetDirection setDirection;
+	public string copySuffix = "_Variant{0}";
+	public bool putClipsInSubfolders;
 	private Sprite[] _subSprites;
 	private bool _spritesAndClipsMatch;
 
@@ -53,7 +56,9 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 			_spritesAndClipsMatch = sampleClips?.Length > 0 && Validation_SheetContainsAnimationSprites(_subSprites, sampleClips);
 			//TODO filter out animation clips that don't affect sprites
 		}
+		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(setDirection)), _setDirectionLabel);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(copySuffix)), _copySuffixLabel);
+		EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(putClipsInSubfolders)), _subfoldersLabel);
 		if (EditorGUI.EndChangeCheck())
 			serializedObject.ApplyModifiedProperties();
 
@@ -61,23 +66,28 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 		if (GUILayout.Button(_generateButtonLabel))
 		{
 			var sampleClipSprites = EditorSpriteUtilities.OrderSpritesByTexturePlacement(
-				sampleClips.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().ToArray());
-			var spriteSets = GetSpriteSets(_subSprites, sampleClipSprites);
+				sampleClips.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().ToArray(), setDirection);
+			var spriteSets = EditorSpriteUtilities.OrderSpritesInSets(_subSprites, setDirection);
+			var suffixRegex = new Regex(copySuffix.Replace("{0}", "\\d+"));
 			foreach (var clip in sampleClips)
 			{
-				var clipPath = AssetDatabase.GetAssetPath(clip);
-				foreach (var set in spriteSets)
+				var originalClipPath = AssetDatabase.GetAssetPath(clip);
+				var baseFileName = Path.GetFileName(originalClipPath);
+				var clipPath = originalClipPath.Replace(baseFileName, string.Empty);
+				foreach (var set in spriteSets) //TODO this is a mess and needs a rewrite. Also sometimes throws an error when trying to create the same copy twice???
 				{
-					//TODO allow for user to provide a naming scheme, or figure something clever out first.
-					var newClipPath = clipPath.Insert(clipPath.LastIndexOf('/') + 1, $"COPY_{set.Key}_");
-					if (AssetDatabase.CopyAsset(clipPath, newClipPath))
+					var newFileName = suffixRegex.IsMatch(baseFileName) ? 
+						suffixRegex.Replace(baseFileName, string.Format(copySuffix, set.Key)) :
+						baseFileName.Insert(baseFileName.LastIndexOf('.'), string.Format(copySuffix, set.Key));
+					var newClipPath = putClipsInSubfolders ? Path.Combine(clipPath, string.Format(copySuffix, set.Key), newFileName) : Path.Combine(clipPath, newFileName);
+					if (putClipsInSubfolders && !AssetDatabase.IsValidFolder(Path.Combine(clipPath, string.Format(copySuffix, set.Key))))
+						AssetDatabase.CreateFolder(clipPath[..^1], string.Format(copySuffix, set.Key));
+					if (originalClipPath != newClipPath && AssetDatabase.CopyAsset(originalClipPath, newClipPath))
 					{
 						var spriteMap = sampleClipSprites.Zip(set.Value, (sample, sprite) => new { sample, sprite }).ToDictionary(item => item.sample, item => item.sprite);
 						EditorSpriteUtilities.ReplaceSpritesInClip(spriteMap, AssetDatabase.LoadAssetAtPath<AnimationClip>(newClipPath));
 						AssetDatabase.SaveAssetIfDirty(new GUID(AssetDatabase.AssetPathToGUID(newClipPath)));
 					}
-					else
-						Debug.LogError($"Failed to create copy asset of {clipPath} at {newClipPath}");
 				}
 			}
 			AssetDatabase.Refresh();
@@ -86,34 +96,14 @@ public class SpritesheetAnimationClipMaker : EditorWindow
 	}
 
 	/// <summary>
-	/// Organize all the sprites into sets (simple rows for now)
-	/// </summary>
-	/// <param name="sprites"></param>
-	private Dictionary<int, Sprite[]> GetSpriteSets(Sprite[] sprites, Sprite[] sampleSprites)
-	{
-		var result = new Dictionary<int, Sprite[]>();
-		foreach(var sprite in sprites)
-		{
-			if (sampleSprites.Contains(sprite))
-				continue;
-			if (int.TryParse(Regex.Match(sprite.name, @"\d+").Value, out var index)) //Find the first number, which in our test case will be X in "CharX". TODO let users provide search patterns
-			{
-				if (result.ContainsKey(index))
-					result[index] = EditorSpriteUtilities.OrderSpritesByTexturePlacement(result[index].Append(sprite).ToArray());
-				else
-					result.Add(index, new Sprite[] { sprite });
-			} 
-		}
-		return result;
-	}
-
-	/// <summary>
 	/// Checks if every sprite in the animation clips is present in the given sheet sprites.
 	/// </summary>
 	/// <param name="sheetSprites">Sprites ripped from a texture sheet.</param>
 	/// <param name="animationClips">Animation clips to check.</param>
-	private bool Validation_SheetContainsAnimationSprites(Sprite[] sheetSprites, AnimationClip[] animationClips)
+	static private bool Validation_SheetContainsAnimationSprites(Sprite[] sheetSprites, AnimationClip[] animationClips)
 	{
-		return animationClips?.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().All(s => ArrayUtility.IndexOf(sheetSprites, s) >= 0) ?? false;
+		if (animationClips?.Where(c => c != null).Count() == 0) 
+			return false;
+		return animationClips.SelectMany(c => EditorSpriteUtilities.GetSpritesFromClip(c)).Distinct().All(s => ArrayUtility.IndexOf(sheetSprites, s) >= 0);
 	}
 }
