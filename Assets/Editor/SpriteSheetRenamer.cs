@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
-//TODO FIX: renaming once in either direction works, but afterwards renaming an asset with the other direction jumbles all the sprites for some reason.
 /// <summary>
 /// Editor tool for quickly renaming all sprites in a spritesheet following a scheme.
 /// </summary>
@@ -28,7 +29,7 @@ public class SpritesheetRenamer : EditorWindow
     private static void OpenWindow()
     {
         const float wndWidth = 400.0f;
-        const float wndHeight = 200.0f;
+        const float wndHeight = 240.0f;
         var pos = new Vector2(0.5f * (Screen.currentResolution.width - wndWidth),
                               0.5f * (Screen.currentResolution.height - wndHeight));
         var window = GetWindow<SpritesheetRenamer>();
@@ -61,7 +62,7 @@ public class SpritesheetRenamer : EditorWindow
         GUILayout.Space(EditorGUIUtility.singleLineHeight);
         if (GUILayout.Button(_renameButtonLabel))
         {
-            _subSprites = EditorSpriteUtilities.OrderSpritesByTexturePlacement(_subSprites, setDirection);
+			_subSprites = EditorSpriteUtilities.OrderSpritesByTexturePlacement(_subSprites, setDirection);
             var formatString = spriteName.Replace("{row}", "{0}").Replace("{column}", "{1}");
             var namePairs = GetSpriteNamePairs(_subSprites, setDirection, spriteRowsColumns, formatString);
             //See https://gist.github.com/edwardrowe/1b18a5c8fd180733a68f
@@ -85,31 +86,39 @@ public class SpritesheetRenamer : EditorWindow
                 i / spriteRowsColumns.y :
                 i % spriteRowsColumns.x;
             result.Add(sprites[i].name, string.Format(formatString, row, column));
-            Debug.Log($"{sprites[i].name}: {string.Format(formatString, row, column)}");
         }
         return result;
     }
 
-    /// <summary>
-    /// Update the meta file.
-    /// </summary>
-    static void AmendMetaFile(Object asset, Dictionary<string, string> renamePairs)
+	/// <summary>
+	/// Update the meta file with the new names by going line per line.
+	/// </summary>
+	static void AmendMetaFile(Object asset, Dictionary<string, string> renamePairs)
     {
-        string path = AssetDatabase.GetAssetPath(asset);
-        var pathToTextureMetaFile = path + ".meta";
-        string metaFile = System.IO.File.ReadAllText(pathToTextureMetaFile);
-        foreach (var pair in renamePairs)
+		var assetPath = AssetDatabase.GetAssetPath(asset);
+		var pathToTextureMetaFile = assetPath + ".meta";
+        var lines = File.ReadAllLines(pathToTextureMetaFile);
+        var spriteDefinitionRegex = new Regex(@"name: (?'spriteName'.+)$");
+        var nameFileIdTableRegex = new Regex(@"(?'spriteName'.+): -?\d+$"); //This will basically capture ANY KeyValuePair in the meta file, so we will need to check its capturegroup content first!
+        for (int i = 0; i < lines.Length; i++)
         {
-            var regex = new Regex($"({pair.Key})\\b"); //Use a regex to ensure we have an exact match with the key.
-            metaFile = regex.Replace(metaFile, pair.Value);
-        }
-        // If users have hidden meta files they will get an access exception.
-        // Need to unhide them briefly.
-        var originalFileAttributes = System.IO.File.GetAttributes(pathToTextureMetaFile);
-        System.IO.File.SetAttributes(pathToTextureMetaFile, originalFileAttributes & ~System.IO.FileAttributes.Hidden);
-        System.IO.File.WriteAllText(pathToTextureMetaFile, metaFile);
-        System.IO.File.SetAttributes(pathToTextureMetaFile, originalFileAttributes);
-
-        AssetDatabase.Refresh();
-    }
+            var spriteDefinitionMatch = spriteDefinitionRegex.Match(lines[i]);
+            var nameFileIdTableMatch = nameFileIdTableRegex.Match(lines[i]);
+            if (spriteDefinitionMatch.Success)
+            {
+                var foundName = spriteDefinitionMatch.Groups["spriteName"].Value;
+                lines[i] = spriteDefinitionRegex.Replace(lines[i], m => { return m.Value.Replace(foundName, renamePairs[foundName]); });
+            }
+            else if (nameFileIdTableMatch.Success && renamePairs.Keys.Contains(nameFileIdTableMatch.Groups["spriteName"].Value))
+            {
+				var foundName = nameFileIdTableMatch.Groups["spriteName"].Value;
+				lines[i] = nameFileIdTableRegex.Replace(lines[i], m => { return m.Value.Replace(foundName, renamePairs[foundName]); });
+			}
+		}
+		var originalFileAttributes = File.GetAttributes(pathToTextureMetaFile);
+		File.SetAttributes(pathToTextureMetaFile, originalFileAttributes & ~FileAttributes.Hidden);
+		File.WriteAllText(pathToTextureMetaFile, string.Join('\n', lines));
+		File.SetAttributes(pathToTextureMetaFile, originalFileAttributes);
+		AssetDatabase.Refresh();
+	}
 }
