@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
-namespace com.SolePilgrim.Unity.Editor.SpriteSheetTools
+namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
     /// <summary>
     /// Editor tool for quickly renaming all sprites in a spritesheet following a scheme.

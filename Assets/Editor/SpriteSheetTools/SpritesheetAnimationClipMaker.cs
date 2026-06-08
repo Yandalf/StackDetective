@@ -4,7 +4,7 @@ using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
 
-namespace com.SolePilgrim.Unity.Editor.SpriteSheetTools
+namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
 	/// <summary>
 	/// Editor tool to automate creating animation clips for all sprites in a spritesheet following example animation clips.

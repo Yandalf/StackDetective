@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace com.SolePilgrim.Unity.Editor.SpriteSheetTools
+namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
 	static public class SpritesheetUtilities
 	{

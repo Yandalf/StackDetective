@@ -1,4 +1,4 @@
-namespace com.SolePilgrim.Unity.Editor.SpriteSheetTools
+namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
 	public enum SpritesheetSetDirection
 	{
