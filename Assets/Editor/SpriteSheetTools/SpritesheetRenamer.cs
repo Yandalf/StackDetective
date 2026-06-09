@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
@@ -14,20 +16,33 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
     {
         static readonly GUIContent _explanationLabel = new("Automatically renames sprites in a spritesheet asset file following a given naming scheme.\nUse this to easily group sets of sprites in large sheets.");
         static readonly GUIContent _spritesheetLabel = new("Spritesheet", "Spritesheet Texture2D asset of which the sub-sprites have to be renamed.");
-        static readonly GUIContent _setDirectionLabel = new("Set Direction", "Direction of each set of Sprites in the spritesheet.");
+        static readonly GUIContent _selectorLabel = new("Selector", "Selectors define how Sprites are ordered within a spritesheet.");
         static readonly GUIContent _subSpriteCountLabel = new("Sprite Count", "Sprites in the sheet.");
-        static readonly GUIContent _spriteRowsColumnsLabel = new("Rows & Columns", "Rows and columns of sprites in the sheet.");
-        static readonly GUIContent _spriteNameLabel = new("Sprites Name", "Name to give each sprite. Insert row and column numbers with {row} and {column}.");
+        static readonly GUIContent _spriteNameLabel = new("Sprites Name", "Name to give each sprite. Insert indices with {setIndex} and {setSubIndex}.");
         static readonly GUIContent _renameButtonLabel = new("Rename", "Rename all the sprites.");
 
         public Texture2D targetSpritesheet;
-        public SpritesheetSetDirection setDirection = SpritesheetSetDirection.Rows;
-        public Vector2Int spriteRowsColumns = Vector2Int.one;
+        [SerializeReference]
+        public SetSelector setSelector = new RowSetSelector();
         public string spriteName;
+        private readonly SetSelector[] _selectors;
+        private readonly GUIContent[] _selectorsDisplayOptions;
         private Sprite[] _subSprites;
 
 
-        [MenuItem("Tools/Sprites/Spritesheet Renamer")]
+		public SpritesheetRenamer()
+		{
+            //TODO search for all Selectors in the project with reflection. I've written tools for this before in another project.
+            _selectors = new SetSelector[] { new RowSetSelector(), new ColumnSetSelector() };
+            _selectorsDisplayOptions = new GUIContent[]
+            {
+                new(nameof(RowSetSelector)),
+                new(nameof(ColumnSetSelector))
+            };
+            setSelector = _selectors[0];
+		}
+
+		[MenuItem("Tools/Sprites/Spritesheet Renamer")]
         private static void OpenWindow()
         {
             const float wndWidth = 400.0f;
@@ -55,18 +70,25 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
             }
             EditorGUI.BeginDisabledGroup(_subSprites == null || _subSprites.Length == 0);
             EditorGUI.BeginChangeCheck();
-            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(setDirection)), _setDirectionLabel);
+            var currentSelectorIndex = Array.IndexOf(_selectors, setSelector);
+			currentSelectorIndex = EditorGUILayout.Popup(_selectorLabel, currentSelectorIndex, _selectorsDisplayOptions);
+            if (EditorGUI.EndChangeCheck())
+            {
+                setSelector = _selectors[currentSelectorIndex];
+                serializedObject.ApplyModifiedProperties();
+            }
+            EditorGUI.BeginChangeCheck();
+			EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(setSelector)), true); //Draw the Selector and its children. TODO find a way to prettify this with custom labels for the children and such.
             EditorGUILayout.LabelField(_subSpriteCountLabel, new GUIContent(_subSprites?.Length.ToString() ?? "0"));
-            EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(spriteRowsColumns)), _spriteRowsColumnsLabel);
             EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(spriteName)), _spriteNameLabel);
             if (EditorGUI.EndChangeCheck())
                 serializedObject.ApplyModifiedProperties();
             GUILayout.Space(EditorGUIUtility.singleLineHeight);
             if (GUILayout.Button(_renameButtonLabel))
             {
-                _subSprites = SpritesheetUtilities.OrderSpritesByTexturePlacement(_subSprites, setDirection);
-                var formatString = spriteName.Replace("{row}", "{0}").Replace("{column}", "{1}");
-                var namePairs = GetSpriteNamePairs(_subSprites, setDirection, spriteRowsColumns, formatString);
+                setSelector.OrderSpritesByAbsoluteIndex(_subSprites);
+                var formatString = spriteName.Replace("{setIndex}", "{0}").Replace("{setSubIndex}", "{1}");
+                var namePairs = GetSpriteNamePairs(_subSprites, setSelector, formatString);
                 //See https://gist.github.com/edwardrowe/1b18a5c8fd180733a68f
                 AmendMetaFile(targetSpritesheet, namePairs);
             }
@@ -76,18 +98,15 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
         /// <summary>
         /// Get pairs of old and new names for each given sprite.
         /// </summary>
-        static Dictionary<string, string> GetSpriteNamePairs(Sprite[] sprites, SpritesheetSetDirection setDirection, Vector2Int spriteRowsColumns, string formatString)
+        static Dictionary<string, string> GetSpriteNamePairs(Sprite[] sprites, SetSelector selector, string formatString)
         {
+            //TODO some indices can skip values, see if there's a way to work around this. Perhaps we can parse scripting instructions from the formatString?
             var result = new Dictionary<string, string>(sprites.Length);
             for (int i = 0; i < sprites.Length; i++)
             {
-                var column = setDirection == SpritesheetSetDirection.Rows ?
-                    i % spriteRowsColumns.y :
-                    i / spriteRowsColumns.x;
-                var row = setDirection == SpritesheetSetDirection.Rows ?
-                    i / spriteRowsColumns.y :
-                    i % spriteRowsColumns.x;
-                result.Add(sprites[i].name, string.Format(formatString, row, column));
+                var index = selector.GetSpriteSetIndex(sprites[i]);
+                var subIndex = selector.GetSpriteSetSubIndex(sprites[i]);
+                result.Add(sprites[i].name, string.Format(formatString, index, subIndex));
             }
             return result;
         }

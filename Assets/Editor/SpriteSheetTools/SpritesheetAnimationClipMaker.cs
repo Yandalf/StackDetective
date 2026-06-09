@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
+	//TODO rewrite to use SetSelectors!
 	/// <summary>
 	/// Editor tool to automate creating animation clips for all sprites in a spritesheet following example animation clips.
 	/// </summary>
