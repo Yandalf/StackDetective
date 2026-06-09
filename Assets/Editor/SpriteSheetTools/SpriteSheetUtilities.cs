@@ -7,25 +7,25 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
 	static public class SpritesheetUtilities
 	{
+		/// <summary>
+		/// Returns all Sprites from the given Texture, ordered row-first from top-left to botttom-right.
+		/// </summary>
 		static public Sprite[] GetSpritesFromTexture2D(Texture2D texture)
 		{
 			if (texture == null)
 				return new Sprite[0];
 
 			return OrderSpritesByTexturePlacement(AssetDatabase.LoadAllAssetsAtPath(AssetDatabase.GetAssetPath(texture))
-				.Where(o => o is Sprite).Cast<Sprite>().ToArray(), SpritesheetSetDirection.Rows);
+				.Where(o => o is Sprite).Cast<Sprite>().ToArray());
 		}
 
 		/// <summary>
 		/// Orders a set of Sprites based on their rectangle position within their original Texture.
 		/// </summary>
 		/// <param name="sortDirection">Primary direction of the sprites within the original Texture.</param>
-		static public Sprite[] OrderSpritesByTexturePlacement(Sprite[] sprites, SpritesheetSetDirection sortDirection)
+		static public Sprite[] OrderSpritesByTexturePlacement(Sprite[] sprites)
 		{
-			if (sortDirection == SpritesheetSetDirection.Rows)
-				return sprites.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x).ToArray();
-			else
-				return sprites.OrderBy(s => s.rect.position.x).ThenByDescending(s => s.rect.position.y).ToArray();
+			return sprites.OrderByDescending(s => s.rect.position.y).ThenBy(s => s.rect.position.x).ToArray();
 		}
 
 		/// <summary>
@@ -60,23 +60,6 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			return sprites;
 		}
 
-		/// <summary>
-		/// Sorts the given sprites into indexed sets.
-		/// </summary>
-		public static Dictionary<int, Sprite[]> OrderSpritesInSets(Sprite[] sprites, SpritesheetSetDirection setDirection)
-		{
-			var result = new Dictionary<int, Sprite[]>();
-			foreach (var sprite in sprites)
-			{
-				var index = GetSpriteSetIndex(sprite, setDirection);
-				if (result.ContainsKey(index))
-					result[index] = OrderSpritesByTexturePlacement(result[index].Append(sprite).ToArray(), setDirection);
-				else
-					result.Add(index, new Sprite[] { sprite });
-			}
-			return result;
-		}
-
 		//TODO this is now limited to Animation Clips modifying SpriteRenderer components. Does it make sense to allow component type configuration?
 		/// <summary>
 		/// Replaces all the Sprites in the AnimationClip with provided Sprites.
@@ -93,20 +76,6 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 					keyframes[i].value = spriteReplacements[(Sprite)keyframes[i].value];
 				AnimationUtility.SetObjectReferenceCurve(clip, binding, keyframes);
 			}
-		}
-
-		/// <summary>
-		/// Gets the set index of the given sprite based on its position in the spritesheet.
-		/// </summary>
-		private static int GetSpriteSetIndex(Sprite sprite, SpritesheetSetDirection setDirection)
-		{
-			var origin = setDirection == SpritesheetSetDirection.Rows ?
-				sprite.textureRect.y * -1 + sprite.texture.height - sprite.textureRect.height : //Recalculate because by default Unity lists sprites from top to bottom, but texture space is bottom to top
-				sprite.textureRect.x;
-			var axisSize = setDirection == SpritesheetSetDirection.Rows ?
-				sprite.textureRect.size.y :
-				sprite.textureRect.size.x;
-			return Mathf.FloorToInt(origin / axisSize);
 		}
 	}
 }
