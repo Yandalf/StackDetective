@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
+	//TODO idea: add rows and columns that can be skipped and rows and columns that are empty. This can correct the indices with sheets with empty spaces for sprites.
 	/// <summary>
 	/// Base class for rules to define a Set of Sprites within a Spritesheet with.
 	/// </summary>
@@ -15,6 +16,7 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 		/// Divides the given Sprites into Sets by SpriteSetIndex.
 		/// </summary>
 		/// <returns>Dictionary of Sprite Sets, each key is the Set's index, values are the Sprites in each set sorted by SetSubIndex.</returns>
+		/// <exception cref="ArgumentException">Throws exception when the sprites don't share the same origin Texture.</exception>
 		public Dictionary<int, Sprite[]> SplitSpritesInSets(Sprite[] sprites)
 		{
 			if (!SpritesheetUtilities.SpritesShareOriginTexture(sprites))
@@ -23,6 +25,16 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			return sprites.OrderBy(sprite => GetSpriteAbsoluteIndex(sprite))
 				.GroupBy(sprite => GetSpriteSetIndex(sprite))
 				.ToDictionary(group => group.Key, group => group.ToArray());
+		}
+
+		/// <summary>
+		/// Returns true if all the Sprites are part of a single set in the same origin Texture.
+		/// </summary>
+		public bool AreSpritesSingleSet(Sprite[] sprites)
+		{
+			if (!SpritesheetUtilities.SpritesShareOriginTexture(sprites))
+				return false;
+			return sprites.All(s => GetSpriteSetIndex(s) == GetSpriteSetIndex(sprites.First()));
 		}
 
 		/// <summary>

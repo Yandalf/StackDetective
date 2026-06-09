@@ -23,7 +23,7 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 
         public Texture2D targetSpritesheet;
         [SerializeReference]
-        public SetSelector setSelector = new RowSetSelector();
+        public SetSelector setSelector;
         public string spriteName;
         private readonly SetSelector[] _selectors;
         private readonly GUIContent[] _selectorsDisplayOptions;
