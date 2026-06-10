@@ -82,11 +82,19 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
             EditorGUILayout.LabelField(_subSpriteCountLabel, new GUIContent(_subSprites?.Length.ToString() ?? "0"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(spriteName)), _spriteNameLabel);
             if (EditorGUI.EndChangeCheck())
-                serializedObject.ApplyModifiedProperties();
-            GUILayout.Space(EditorGUIUtility.singleLineHeight);
+            {
+				serializedObject.ApplyModifiedProperties();
+				setSelector.skippedRowsIndices = setSelector.ParseNumberString(setSelector.skippedRows);
+				setSelector.skippedColumnsIndices = setSelector.ParseNumberString(setSelector.skippedColumns);
+			}
+			GUILayout.Space(EditorGUIUtility.singleLineHeight);
             if (GUILayout.Button(_renameButtonLabel))
             {
-                setSelector.OrderSpritesByAbsoluteIndex(_subSprites);
+                setSelector.skippedColumnsIndices = setSelector.ParseNumberString(setSelector.skippedColumns);
+                setSelector.skippedRowsIndices = setSelector.ParseNumberString(setSelector.skippedRows).OrderBy(i => i).ToArray();
+				Debug.Log($"skipped columns: {string.Join(',', setSelector.skippedColumnsIndices)}");
+				Debug.Log($"skipped rows: {string.Join(',', setSelector.skippedRowsIndices)}");
+				setSelector.OrderSpritesByAbsoluteIndex(_subSprites);
                 var formatString = spriteName.Replace("{setIndex}", "{0}").Replace("{setSubIndex}", "{1}");
                 var namePairs = GetSpriteNamePairs(_subSprites, setSelector, formatString);
                 //See https://gist.github.com/edwardrowe/1b18a5c8fd180733a68f

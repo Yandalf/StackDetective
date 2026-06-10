@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
@@ -12,6 +13,10 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 	[Serializable]
 	abstract public class SetSelector : IComparer<Sprite>
 	{
+		public string skippedRows, skippedColumns;
+		[HideInInspector] public int[] skippedRowsIndices, skippedColumnsIndices;
+
+
 		/// <summary>
 		/// Divides the given Sprites into Sets by SpriteSetIndex.
 		/// </summary>
@@ -43,6 +48,18 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 		public void OrderSpritesByAbsoluteIndex(Sprite[] sprites)
 		{
 			Array.Sort(sprites, this);
+		}
+
+		public int[] ParseNumberString(string numberString, bool sort = true)
+		{
+			var result = Regex.Matches(numberString, @"\d+").
+				Cast<Match>().
+				Select(m => int.Parse(m.Value)).
+				OrderBy(i => i).
+				ToArray();
+			if (sort)
+				Array.Sort(result);
+			return result;
 		}
 
 		/// <summary>

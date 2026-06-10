@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
@@ -13,7 +12,8 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 		public Vector2Int spriteRowsColumns;
 
 
-		public int GetSpriteRowIndex(Sprite sprite)
+		//TODO implement skippedRows
+		public int GetSpriteRowIndex(Sprite sprite, int[] skippedRows = null)
 		{
 			//By default Unity lists sprites from top to bottom, but texture space is bottom to top.
 			//We recalculate the Y-Value of the Sprite origin to be top to bottom.
@@ -22,7 +22,8 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			return Mathf.FloorToInt(origin / axisSize);
 		}
 
-		public int GetSpriteColumnIndex(Sprite sprite)
+		//TODO implement skippedColumns
+		public int GetSpriteColumnIndex(Sprite sprite, int[] skippedColumns = null)
 		{
 			var origin = sprite.textureRect.x;
 			var axisSize = sprite.textureRect.size.x;

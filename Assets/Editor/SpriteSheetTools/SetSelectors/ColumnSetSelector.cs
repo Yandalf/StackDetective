@@ -11,16 +11,16 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 	{
 		public override int GetSpriteSetIndex(Sprite sprite)
 		{
-			return GetSpriteColumnIndex(sprite);
+			return GetSpriteColumnIndex(sprite, skippedColumnsIndices);
 		}
 		public override int GetSpriteSetSubIndex(Sprite sprite)
 		{
-			return GetSpriteRowIndex(sprite);
+			return GetSpriteRowIndex(sprite, skippedRowsIndices);
 		}
 
 		public override int GetSpriteAbsoluteIndex(Sprite sprite)
 		{
-			return GetSpriteColumnIndex(sprite) * spriteRowsColumns.y + GetSpriteRowIndex(sprite);
+			return GetSpriteColumnIndex(sprite, skippedColumnsIndices) * spriteRowsColumns.y + GetSpriteRowIndex(sprite, skippedRowsIndices);
 		}
 	}
 }
