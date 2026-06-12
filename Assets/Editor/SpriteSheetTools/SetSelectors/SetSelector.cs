@@ -6,14 +6,14 @@ using UnityEngine;
 
 namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 {
-	//TODO idea: add rows and columns that can be skipped and rows and columns that are empty. This can correct the indices with sheets with empty spaces for sprites.
 	/// <summary>
 	/// Base class for rules to define a Set of Sprites within a Spritesheet with.
 	/// </summary>
 	[Serializable]
 	abstract public class SetSelector : IComparer<Sprite>
 	{
-		public string skippedRows, skippedColumns;
+		public string skippedRows;
+		public string skippedColumns;
 		[HideInInspector] public int[] skippedRowsIndices, skippedColumnsIndices;
 
 

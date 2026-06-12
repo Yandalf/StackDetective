@@ -92,8 +92,6 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
             {
                 setSelector.skippedColumnsIndices = setSelector.ParseNumberString(setSelector.skippedColumns);
                 setSelector.skippedRowsIndices = setSelector.ParseNumberString(setSelector.skippedRows).OrderBy(i => i).ToArray();
-				Debug.Log($"skipped columns: {string.Join(',', setSelector.skippedColumnsIndices)}");
-				Debug.Log($"skipped rows: {string.Join(',', setSelector.skippedRowsIndices)}");
 				setSelector.OrderSpritesByAbsoluteIndex(_subSprites);
                 var formatString = spriteName.Replace("{setIndex}", "{0}").Replace("{setSubIndex}", "{1}");
                 var namePairs = GetSpriteNamePairs(_subSprites, setSelector, formatString);
