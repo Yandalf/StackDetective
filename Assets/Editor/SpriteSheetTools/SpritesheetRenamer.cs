@@ -82,16 +82,10 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
             EditorGUILayout.LabelField(_subSpriteCountLabel, new GUIContent(_subSprites?.Length.ToString() ?? "0"));
             EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(spriteName)), _spriteNameLabel);
             if (EditorGUI.EndChangeCheck())
-            {
 				serializedObject.ApplyModifiedProperties();
-				setSelector.skippedRowsIndices = setSelector.ParseNumberString(setSelector.skippedRows);
-				setSelector.skippedColumnsIndices = setSelector.ParseNumberString(setSelector.skippedColumns);
-			}
 			GUILayout.Space(EditorGUIUtility.singleLineHeight);
             if (GUILayout.Button(_renameButtonLabel))
             {
-                setSelector.skippedColumnsIndices = setSelector.ParseNumberString(setSelector.skippedColumns);
-                setSelector.skippedRowsIndices = setSelector.ParseNumberString(setSelector.skippedRows).OrderBy(i => i).ToArray();
 				setSelector.OrderSpritesByAbsoluteIndex(_subSprites);
                 var formatString = spriteName.Replace("{setIndex}", "{0}").Replace("{setSubIndex}", "{1}");
                 var namePairs = GetSpriteNamePairs(_subSprites, setSelector, formatString);
@@ -106,7 +100,6 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
         /// </summary>
         static Dictionary<string, string> GetSpriteNamePairs(Sprite[] sprites, SetSelector selector, string formatString)
         {
-            //TODO some indices can skip values, see if there's a way to work around this. Perhaps we can parse scripting instructions from the formatString?
             var result = new Dictionary<string, string>(sprites.Length);
             for (int i = 0; i < sprites.Length; i++)
             {

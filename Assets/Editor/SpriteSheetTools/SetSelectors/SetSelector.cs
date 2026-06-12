@@ -12,11 +12,6 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 	[Serializable]
 	abstract public class SetSelector : IComparer<Sprite>
 	{
-		public string skippedRows;
-		public string skippedColumns;
-		[HideInInspector] public int[] skippedRowsIndices, skippedColumnsIndices;
-
-
 		/// <summary>
 		/// Divides the given Sprites into Sets by SpriteSetIndex.
 		/// </summary>
@@ -50,6 +45,11 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			Array.Sort(sprites, this);
 		}
 
+		//TODO this could probably be moved to a Utility somewhere.
+		/// <summary>
+		/// Parses a list of numbers to an array.
+		/// </summary>
+		/// <param name="sort">If true the list will be sorted in ascending order.</param>
 		public int[] ParseNumberString(string numberString, bool sort = true)
 		{
 			var result = Regex.Matches(numberString, @"\d+").

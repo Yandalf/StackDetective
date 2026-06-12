@@ -9,35 +9,47 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 	/// </summary>
 	abstract public class RowColumnSetSelector : SetSelector
 	{
-		static readonly GUIContent _spriteRowsColumnsLabel = new("Rows & Columns");
-
 		[Tooltip("Rows and columns of sprites in the sheet.")]
 		public Vector2Int spriteRowsColumns;
+		[Tooltip("0-based indices of rows that must be skipped in the spritesheet.")]
+		public string skippedRows;
+		[Tooltip("0-based indices of columns that must be skipped in the spritesheet.")]
+		public string skippedColumns;
 
 
-		public int GetSpriteRowIndex(Sprite sprite, int[] skippedRows = null)
+		/// <summary>
+		/// Get the 0-based index of the sprite's row within its spritesheet.
+		/// </summary>
+		/// <param name="skipRows">If true the index will be reduced if there are empty rows before the sprite's row.</param>
+		public int GetSpriteRowIndex(Sprite sprite, bool skipRows = true)
 		{
 			//By default Unity lists sprites from top to bottom, but texture space is bottom to top.
 			//We recalculate the Y-Value of the Sprite origin to be top to bottom.
 			var origin = -sprite.textureRect.y + sprite.texture.height - sprite.textureRect.height;
 			var axisSize = sprite.textureRect.size.y;
 			var index = Mathf.FloorToInt(origin/axisSize);
-			if (skippedRows != null)
+			if (skipRows)
 			{
-				var lastIndex = Array.IndexOf(skippedRows, skippedRows.LastOrDefault(i => index > i));
+				var rowIndices = ParseNumberString(skippedRows);
+				var lastIndex = Array.IndexOf(rowIndices, rowIndices.LastOrDefault(i => index > i));
 				return lastIndex >= 0 ? index - (lastIndex + 1) : index;
 			}
 			return index;
 		}
 
-		public int GetSpriteColumnIndex(Sprite sprite, int[] skippedColumns = null)
+		/// <summary>
+		/// Get the 0-based index of the sprite's column within its spritesheet.
+		/// </summary>
+		/// <param name="skipColumns">If true the index will be reduced if there are empty columns before the sprite's column.</param>
+		public int GetSpriteColumnIndex(Sprite sprite, bool skipColumns = true)
 		{
 			var origin = sprite.textureRect.x;
 			var axisSize = sprite.textureRect.size.x;
 			var index = Mathf.FloorToInt(origin / axisSize);
-			if (skippedColumns != null)
+			if (skipColumns)
 			{
-				var lastIndex = Array.IndexOf(skippedColumns, skippedColumns.LastOrDefault(i => index > i));
+				var columnIndices = ParseNumberString(skippedColumns);
+				var lastIndex = Array.IndexOf(columnIndices, columnIndices.LastOrDefault(i => index > i));
 				return lastIndex >= 0 ? index - (lastIndex + 1) : index;
 			}
 			return index;
