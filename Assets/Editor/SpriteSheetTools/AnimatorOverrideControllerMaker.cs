@@ -1,3 +1,4 @@
+using com.SolePilgrim.Unity.Extensions.Attributes;
 using UnityEditor;
 using UnityEditor.Animations;
 using UnityEngine;
@@ -10,8 +11,11 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 	public sealed class AnimatorOverrideControllerMaker : EditorWindow
 	{
 		static readonly GUIContent _animatorControllerLabel = new("Target Animator Controller", "The Animator Controller for which to create overrides.");
+		static readonly GUIContent _animationSetsFoldersLabel = new("Animationset Folders", "Paths to the sets of animations for which to make Animator Override Controllers.");
 		static readonly GUIContent _generateButtonLabel = new("Create Override Controllers");
 		public AnimatorController targetAnimatorController;
+		[FolderPathDialog("Animation Set")]
+		public string[] animationSetsFolders;
 
 
 		[MenuItem("Tools/Sprites/Animator Override Controller Maker")]
@@ -33,6 +37,7 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 
 			EditorGUI.BeginChangeCheck();
 			EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(targetAnimatorController)), _animatorControllerLabel);
+			EditorGUILayout.PropertyField(serializedObject.FindProperty(nameof(animationSetsFolders)), _animationSetsFoldersLabel);
 			if (EditorGUI.EndChangeCheck())
 				serializedObject.ApplyModifiedProperties();
 
