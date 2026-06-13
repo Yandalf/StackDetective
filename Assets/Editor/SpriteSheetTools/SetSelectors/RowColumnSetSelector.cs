@@ -31,8 +31,8 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			if (skipRows)
 			{
 				var rowIndices = ParseNumberString(skippedRows);
-				var lastIndex = Array.IndexOf(rowIndices, rowIndices.LastOrDefault(i => index > i));
-				return lastIndex >= 0 ? index - (lastIndex + 1) : index;
+				var skippedRowCount = rowIndices.Count(i => index > i);
+				return index - skippedRowCount;
 			}
 			return index;
 		}
@@ -49,8 +49,8 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 			if (skipColumns)
 			{
 				var columnIndices = ParseNumberString(skippedColumns);
-				var lastIndex = Array.IndexOf(columnIndices, columnIndices.LastOrDefault(i => index > i));
-				return lastIndex >= 0 ? index - (lastIndex + 1) : index;
+				var skippedColumnCount = columnIndices.Count(i => index > i);
+				return index - skippedColumnCount;
 			}
 			return index;
 		}
