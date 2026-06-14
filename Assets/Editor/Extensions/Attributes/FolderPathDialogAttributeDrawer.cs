@@ -26,8 +26,6 @@ namespace com.SolePilgrim.Unity.Editor.Extensions.Attributes
 			container.Add(pathField);
 			container.Add(selectionButton);
 			return container;
-
-			return base.CreatePropertyGUI(property);
 		}
 		#endregion UIToolkit
 		#region IMGUI
