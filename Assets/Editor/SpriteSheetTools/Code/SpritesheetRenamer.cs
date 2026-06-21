@@ -46,7 +46,7 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
         private static void OpenWindow()
         {
             const float wndWidth = 400.0f;
-            const float wndHeight = 240.0f;
+            const float wndHeight = 280.0f;
             var pos = new Vector2(0.5f * (Screen.currentResolution.width - wndWidth),
                                   0.5f * (Screen.currentResolution.height - wndHeight));
             var window = GetWindow<SpritesheetRenamer>();

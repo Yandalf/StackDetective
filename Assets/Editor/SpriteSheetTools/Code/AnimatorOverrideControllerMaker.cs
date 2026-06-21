@@ -19,8 +19,8 @@ namespace com.SolePilgrim.Unity.Editor.SpritesheetTools
 		static readonly string _animationSetCaptureGroupName = "animationSetName";
 		static readonly GUIContent _animatorControllerLabel = new("Target Animator Controller", "The Animator Controller for which to create overrides.");
 		static readonly GUIContent _animationSetsFoldersLabel = new("Animationset Folders", "Paths to the sets of animations for which to make Animator Override Controllers.");
-		static readonly GUIContent _sourceAnimationNameFilterLabel = new("Source Animation Name Filter", "Denotes which part of the name of animations in the source clips to compare with. Use _ as section markers, * as wildcard characters, and {compare} for parts that must be compared.");
-		static readonly GUIContent _replacementAnimationNameFilterLabel = new("Replacement Animation Name Filter", "Denotes which part of the name of animations in the replacement clips to compare with. Use _ as section markers, * as wildcard characters, . for filename ends, {compare} for parts that must be compared, and {setName} for the part denoting the animation set name.");
+		static readonly GUIContent _sourceAnimationNameFilterLabel = new("Source Animation Name Filter", "Denotes which part of the name of animations in the source clips to compare with. Use * as greedy wildcard characters, and {compare} for parts that must be compared.");
+		static readonly GUIContent _replacementAnimationNameFilterLabel = new("Replacement Animation Name Filter", "Denotes which part of the name of animations in the replacement clips to compare with. Use * as greedy wildcard characters, {compare} for parts that must be compared, and {setName} for the part denoting the animation set name.");
 		static readonly GUIContent _generateButtonLabel = new("Create Override Controllers");
 		public AnimatorController targetAnimatorController;
 		[FolderPathDialog("Animation Set")]
