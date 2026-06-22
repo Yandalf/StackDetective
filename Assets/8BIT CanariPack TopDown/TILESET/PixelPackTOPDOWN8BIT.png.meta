@@ -1,0 +1,3656 @@
+fileFormatVersion: 2
+guid: 243ae00e98f97fb4a8b2d3a34c964fd1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7490379605600093037
+    second: PixelPackTOPDOWN8BIT_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63cf98c09c23f760800000000000000
+      internalID: 7490379605600093037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stair_Wide_L
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b1bdac9a1ddde40bced5f7c40511c9
+      internalID: -1451901143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stair_Wide
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724b6184d816a724e9531ba0bd0e43b3
+      internalID: 1301999291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stair_Wide_R
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8423c3eb38f7cd24bbe80a405a855dbf
+      internalID: 816283041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stair_Narrow
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 464
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5fd23b2208910409fd02d8d407e289
+      internalID: 1242567363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_TL
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8479e21d6a5b5e84d91f944239964b7c
+      internalID: -631611844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_T
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7222b17907d45bc4cace49fad6b03d10
+      internalID: 1315488682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_green_TR
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 448
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64323c19f2b929449976b88523c0fb7
+      internalID: 547101418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_L
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f636b78646a9149a9c36ff1bc1ec6a
+      internalID: -1552454775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_C
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e82c0480ae620ba459c6d8a0bb21d778
+      internalID: -2076065442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_R
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 432
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f517868c6ad2f8478b5178ace3b6f7a
+      internalID: -2044688573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_BL
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1552fcef70406499413c83c3b6b173
+      internalID: 1771517004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_B
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31567efe2bd66114088b0ebd57430ea5
+      internalID: -1554799112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grass_Green_BR
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0231e3a84803a4b8748755d8f5dde4
+      internalID: 571676763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_83
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 384
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8574c09116212dd4581b2dca7667581e
+      internalID: -644793561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_307
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dae2b078a36afb408cad61852bfca52
+      internalID: -1756041276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_308
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ec62bb095ecbf418b3e6f36ca8557b
+      internalID: 1963448124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_309
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51433e35ffcc5864a816e2be165eb012
+      internalID: -1006868723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_310
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72308b0264530864db326268f91c0f4e
+      internalID: -335115445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_311
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a283ee83d42bad459571e16b40fb368
+      internalID: 1314040340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_312
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c6f20cd3500f84a8c7ae2725f7801a
+      internalID: -1388764771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_313
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f439686e34950419ea6dc4c22b500f
+      internalID: -1292265783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_314
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6335bb7c592fe744081f06ac3758cf87
+      internalID: 1131180688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_315
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e2f83e304eff5e44af561715fd0bd87
+      internalID: -780844885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_316
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485b2130e4714784486ea9405f71e416
+      internalID: 1172893003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_317
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52aed5dff709c8548a3da0c910b79003
+      internalID: -739072425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_318
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b8b1d0da2a5ee14796ae62a0934d4f1
+      internalID: -315210799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_323
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9de5a590caab7a1478779cb92b380600
+      internalID: 109229144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_324
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e6f3443dda87114c855ff6209f1c853
+      internalID: 1937064833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_325
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8aa651be9eb5949a57234c0331324f
+      internalID: -1345124382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_326
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5987b9d577171149a57d052cd1a4d30
+      internalID: 1073866695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_327
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804f89470f465b74fa747bfd2d17975b
+      internalID: -1684743559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_328
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d3a2ca5e4ae5f4ca0baa28875d3b6c
+      internalID: -1985334113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_329
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8594d9e4da2779e4e9f9954f0bf59d3e
+      internalID: -897993549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_330
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb92dc5a7caadd42a0770fa59e318f1
+      internalID: 1045381587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_331
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 460938207a77cf248b03e2e3c84c33d7
+      internalID: -118980241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_332
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b73ae2ce9454f479b5d8bf80bdc6f9
+      internalID: -1636586418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_333
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfa59222ff22034ca33b9b4f7c5a7b8
+      internalID: -639799475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_334
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0217113d243e42444a8b7522d44ff918
+      internalID: -44073205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_339
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6730ff01182a0044e90272cb150cb74e
+      internalID: 1899009112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_340
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118c15dc1086422478a809949a1f91b8
+      internalID: -509623034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_341
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd962e76192ed004e8ad91357efda6f5
+      internalID: 2094844620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_342
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02db7ddb41839548a5dd407ae7914c3
+      internalID: -990476864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_343
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93543a1def03347438154a04ec59d545
+      internalID: -1509471006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_344
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89b3d22bf1090a542abaa87de775ccee
+      internalID: -1417688453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_345
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1490965dd18e31444bc8136d005fb1c7
+      internalID: 855817172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_346
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22a84e51a68b52248ae91834a4d12371
+      internalID: 1247811986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_347
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe30d6e7f78dfa445ac7dd8a87f69947
+      internalID: 917468429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_348
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abe4b5014c17b744bb052d61432aaab
+      internalID: -383909007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_349
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c7a9c57fe938704ca5413ce25f8a27d
+      internalID: -576168955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_350
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2740191607fd68c49ad269d0e4c7501c
+      internalID: -1174330927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_355
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f721a00672ec5ed4b9d0bc410361081b
+      internalID: -809508253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_356
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88d0ef8536d76946a23c8edad7203a0
+      internalID: -465140397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_357
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cff7a88f80c6e5419ed39e7bf7b5597
+      internalID: -324841961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_358
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5cc9e002b2c7c4986a51fd37fa54e9
+      internalID: 1427173687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_359
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a60756f3efc21a4469028f1edc32d1bd
+      internalID: 415789567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_360
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865bfc9b0fe327748bc665268b65f3cf
+      internalID: 200940248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_361
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0e7f9f19ab21448812315d4748fbe4
+      internalID: -1186170758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_362
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1eca5a5a6b0ffae4e9360e6c9117a8c5
+      internalID: -1920665836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_363
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2da7a071603823498c8c5a9a8ec4094
+      internalID: -962372615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_364
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736056aed27e842449adea052d57c1b5
+      internalID: 1055210912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_365
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461ddb9425440464b804fcdeb977eb0a
+      internalID: 495151194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_366
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56f59d66fa64d548801fa48c138c7dc
+      internalID: -1661584252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_367
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8577f02b5e8a514e9494d58eff3f73a
+      internalID: 1513577068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_368
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc087881bfc6dc41bf2b84d0654e498
+      internalID: -1939472394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_369
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa660a748339554eafabb81685ad5cf
+      internalID: -1935046718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_370
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5643192da0506d49b6b9138abd7f392
+      internalID: -318582216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_371
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23e9845f597b514dbe0ff7eec213533
+      internalID: 1700147260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_372
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93c3d07a2244c0e4eb70d56ad0df9fef
+      internalID: -1659237908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_373
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f6e92eb45be839478ded60d5c42d093
+      internalID: -1404235192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_374
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e04365158d9c94c9414568cb21bce4
+      internalID: 835965455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_375
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda0dfa79f9e9dd4f87d3861286cb5be
+      internalID: 1074514561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_376
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbdc225f3736623449c6b35508b782da
+      internalID: -395333122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_377
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e949c1ddc12c56e4982883ae9840a571
+      internalID: -1333252074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_378
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9112188ffcf434743ae208559a915cce
+      internalID: 1298865540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_379
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa0f21cc36be1a469d1da19f5826b4d
+      internalID: 1694194967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_380
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77531be3e90f64144a0444d368c78ceb
+      internalID: 1880838071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_381
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da32fa29956daff4c92ecc7a63083e0d
+      internalID: 771749098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_382
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1708fc19bcae62042aab035c9233b53f
+      internalID: -1381238267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_383
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d57c54e7ad3d044bd728e89145c4c8
+      internalID: -1753462305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_384
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee95a56527e19164a9c6303e589f4822
+      internalID: 1530422963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_385
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba6203b931570a84cbcc6c9b68f0043a
+      internalID: -358449034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_386
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630488ef70bc8254fa5875064d758c50
+      internalID: -1175405034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_WindowSq_TL
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aceaddacc7f66514b8c5f3c9bed13020
+      internalID: 964912546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_WindowSq_TR
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f367718d2462684ba0cbb4add8de20c
+      internalID: 1621183757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_TL
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 298a4b5839864b546bca2ed521149643
+      internalID: 615977701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_T
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f827a742089e9ef4db8b57450023dea1
+      internalID: 1886690962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_TR
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df228f6728953de488013ddc377d4dca
+      internalID: 602606296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Recess_TR
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d1f79d932a9df43b1c7a51258f1d3c
+      internalID: 1270502341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Wall_T
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c87b01e7c150b459313024c886abbe
+      internalID: -780087872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Recess_TL
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6279e25e0f6743445afd7216815c1b8b
+      internalID: 521842015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_395
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86bb345362b595547879bc256add4b7f
+      internalID: 1530748411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_396
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ebfcffa30b5fd4c9010c59811dc9c6
+      internalID: -345810395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_397
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05050b41af413fb4cb0fbd210a9c6b95
+      internalID: -1462504858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_398
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3728d6843b3ee242b17e9f07932b355
+      internalID: 1792556315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_399
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3fc8a955120344ea2105654b7d2533
+      internalID: 1819616685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_400
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73627676c4f0c3f41a3c6a39f2500624
+      internalID: 1576475421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_401
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8103dd483ae33d44c92863ab2b334551
+      internalID: 1122276565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_402
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8853b86c72aa04996222bba2a3c7af
+      internalID: 47267273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_WindowSq_BL
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a4b09f9017d3045af6887f7f6ee33c
+      internalID: -1694042925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_WindowSq_BR
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee04772f40e6ed4aa7ec4a01fdecaf7
+      internalID: 352913092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_BL
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daae1643b988cef4d974dbaf80e7c00d
+      internalID: 1564116803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_B
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be64c29637426834da7b63279800a3c7
+      internalID: -1754842684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_BR
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a941766824c4284396a7de5196d9068
+      internalID: -215567294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Recess_BR
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6873f6a172fa6cf418f3de34bd8564cd
+      internalID: -987959009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Wall_B
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f58c190ed14cf40ad3a55617669ea4
+      internalID: 456163540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Recess_BL
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95a33ffa35eafc14f8cd0a9c8df6dad7
+      internalID: -1103399739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_411
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6c6e49bdcb6e04db391b2085a97b30
+      internalID: 331292618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_412
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c5735266d9e2744a2c11b1dccd7271
+      internalID: -237100805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_413
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a2373ddd580e349aa3d53e5a2c1e31
+      internalID: 508348680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_414
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39dac2045b93cc4ba735ad54f994fae
+      internalID: 486930862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_415
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d789dfd5150c09849bb140abd463b327
+      internalID: -841740336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_416
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88e6a06097ab8f4e89cbdc0fb745858
+      internalID: -1146306603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_417
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6086f6481a27a9468e6ae373680a3f8
+      internalID: -1822485869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_418
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65cbb0c8f82a5b74fa473bfb8db43411
+      internalID: -927449902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_Narrow_T
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 703093703f5786f4a90a14d98fa5f407
+      internalID: -824174958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_420
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 320babf7511772447ae381670a0823ac
+      internalID: -1931960823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_421
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a3de97804a590743bc7e9ad3aaa11f3
+      internalID: -1344089237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_422
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22254d607a56496408ef7163a2ded860
+      internalID: -164863601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_423
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bebe0925661520f45908fb4877d4af8e
+      internalID: 434510487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_424
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5792987a0375fa341b55a0466d698e85
+      internalID: 227983002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_425
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc0e699e7f191b4ab722b35b4f208c1
+      internalID: 1815683794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_426
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2c54153f664f74a90b62022482a34d
+      internalID: 1702264150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_427
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1c0c885d7826449b8ca541c76f9e7a
+      internalID: 2018209289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_428
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4a57584ca2c2a41b3f389609b169b3
+      internalID: -57280411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_429
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca82f357afca8284588bea9ce5b14479
+      internalID: 1886824529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_430
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803d690649a267d4c80163696fc92621
+      internalID: -790679882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_431
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb08685138d69d48a9c8821f67d1fc3
+      internalID: -1499016444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_432
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5e3cf2d756111342aaad3c5d6efe188
+      internalID: -121028625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_433
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 915f1d51f53e1e74988c616a0f0db59e
+      internalID: 476811247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_434
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb16bf8fda6e484197b8bf92c1a3745
+      internalID: 1675106289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Building_Light_Window_Narrow_B
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf99b01c5fd1eeb489ac55734068eb31
+      internalID: -2075824618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_436
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71d392cb8d06a9408cb50db67888fae
+      internalID: -1684207229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_437
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3043c1f4268d84593a833b990c0f05
+      internalID: 1331592473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_438
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f71a449c7160454aa51df8782615246
+      internalID: 819989253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_439
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06fb44fd078d63c45aa4c4bdc4b6b1a1
+      internalID: -1824540483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_440
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d87dd075f41634485607d3b3221e9f
+      internalID: 1405825905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_441
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7acee6ebb429fd24aa39fd9e5b3e3828
+      internalID: 1449884967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PixelPackTOPDOWN8BIT_442
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c3e2bb47ea04e84581bde7da14ad9d0
+      internalID: 1697150561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: fa32b476abbc87e4db92e162e520f95d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Black: 7490379605600093037
+      Building_Light_Recess_BL: -1103399739
+      Building_Light_Recess_BR: -987959009
+      Building_Light_Recess_TL: 521842015
+      Building_Light_Recess_TR: 1270502341
+      Building_Light_Wall_B: 456163540
+      Building_Light_Wall_T: -780087872
+      Building_Light_WindowSq_BL: -1694042925
+      Building_Light_WindowSq_BR: 352913092
+      Building_Light_WindowSq_TL: 964912546
+      Building_Light_WindowSq_TR: 1621183757
+      Building_Light_Window_B: -1754842684
+      Building_Light_Window_BL: 1564116803
+      Building_Light_Window_BR: -215567294
+      Building_Light_Window_Narrow_B: -2075824618
+      Building_Light_Window_Narrow_T: -824174958
+      Building_Light_Window_T: 1886690962
+      Building_Light_Window_TL: 615977701
+      Building_Light_Window_TR: 602606296
+      Grass_Green_B: -1554799112
+      Grass_Green_BL: 1771517004
+      Grass_Green_BR: 571676763
+      Grass_Green_C: -2076065442
+      Grass_Green_L: -1552454775
+      Grass_Green_R: -2044688573
+      Grass_Green_T: 1315488682
+      Grass_Green_TL: -631611844
+      Grass_green_TR: 547101418
+      PixelPackTOPDOWN8BIT_10: -2052807469
+      PixelPackTOPDOWN8BIT_100: -732072143
+      PixelPackTOPDOWN8BIT_101: -45962483
+      PixelPackTOPDOWN8BIT_102: -462253123
+      PixelPackTOPDOWN8BIT_103: 453467315
+      PixelPackTOPDOWN8BIT_104: 2005979110
+      PixelPackTOPDOWN8BIT_105: -593989661
+      PixelPackTOPDOWN8BIT_106: 1655348022
+      PixelPackTOPDOWN8BIT_107: 1126010960
+      PixelPackTOPDOWN8BIT_108: -1978440212
+      PixelPackTOPDOWN8BIT_109: -1165738371
+      PixelPackTOPDOWN8BIT_11: 1107995507
+      PixelPackTOPDOWN8BIT_110: 246421259
+      PixelPackTOPDOWN8BIT_111: 1985453199
+      PixelPackTOPDOWN8BIT_112: 1678187696
+      PixelPackTOPDOWN8BIT_113: 1501439386
+      PixelPackTOPDOWN8BIT_114: 870352414
+      PixelPackTOPDOWN8BIT_115: -2024511388
+      PixelPackTOPDOWN8BIT_116: -673007934
+      PixelPackTOPDOWN8BIT_117: 1645292567
+      PixelPackTOPDOWN8BIT_118: -859964565
+      PixelPackTOPDOWN8BIT_119: -900376404
+      PixelPackTOPDOWN8BIT_12: -218274927
+      PixelPackTOPDOWN8BIT_120: 1170320468
+      PixelPackTOPDOWN8BIT_121: -820961370
+      PixelPackTOPDOWN8BIT_122: -826339892
+      PixelPackTOPDOWN8BIT_123: 274742459
+      PixelPackTOPDOWN8BIT_124: -440361334
+      PixelPackTOPDOWN8BIT_125: -427811310
+      PixelPackTOPDOWN8BIT_126: -1925124366
+      PixelPackTOPDOWN8BIT_127: 44657905
+      PixelPackTOPDOWN8BIT_128: -583132084
+      PixelPackTOPDOWN8BIT_129: -1039611574
+      PixelPackTOPDOWN8BIT_13: -1725202133
+      PixelPackTOPDOWN8BIT_130: 1989608496
+      PixelPackTOPDOWN8BIT_131: -1181469052
+      PixelPackTOPDOWN8BIT_132: 886431786
+      PixelPackTOPDOWN8BIT_133: 1536052483
+      PixelPackTOPDOWN8BIT_134: 1563335976
+      PixelPackTOPDOWN8BIT_135: 1281067557
+      PixelPackTOPDOWN8BIT_136: -1232608535
+      PixelPackTOPDOWN8BIT_137: 1926828356
+      PixelPackTOPDOWN8BIT_138: 875349182
+      PixelPackTOPDOWN8BIT_139: -1448487457
+      PixelPackTOPDOWN8BIT_14: -1789837343
+      PixelPackTOPDOWN8BIT_140: -362534480
+      PixelPackTOPDOWN8BIT_141: -104854992
+      PixelPackTOPDOWN8BIT_142: 842277493
+      PixelPackTOPDOWN8BIT_143: -1837097495
+      PixelPackTOPDOWN8BIT_144: -1694791077
+      PixelPackTOPDOWN8BIT_145: -1060255319
+      PixelPackTOPDOWN8BIT_146: 1004639841
+      PixelPackTOPDOWN8BIT_147: 1211227980
+      PixelPackTOPDOWN8BIT_148: 1185189784
+      PixelPackTOPDOWN8BIT_149: -1010130128
+      PixelPackTOPDOWN8BIT_150: -638086371
+      PixelPackTOPDOWN8BIT_151: 178255952
+      PixelPackTOPDOWN8BIT_152: -962413807
+      PixelPackTOPDOWN8BIT_153: -1967432429
+      PixelPackTOPDOWN8BIT_154: -437641847
+      PixelPackTOPDOWN8BIT_155: 759658978
+      PixelPackTOPDOWN8BIT_156: -475127334
+      PixelPackTOPDOWN8BIT_157: -178167016
+      PixelPackTOPDOWN8BIT_158: -1118732402
+      PixelPackTOPDOWN8BIT_159: 1650777947
+      PixelPackTOPDOWN8BIT_160: -1691397457
+      PixelPackTOPDOWN8BIT_161: -1663579928
+      PixelPackTOPDOWN8BIT_162: 443166075
+      PixelPackTOPDOWN8BIT_163: -515207728
+      PixelPackTOPDOWN8BIT_164: -1005772849
+      PixelPackTOPDOWN8BIT_165: 396889448
+      PixelPackTOPDOWN8BIT_166: 830656842
+      PixelPackTOPDOWN8BIT_167: -197360930
+      PixelPackTOPDOWN8BIT_168: -856072406
+      PixelPackTOPDOWN8BIT_169: 1987342313
+      PixelPackTOPDOWN8BIT_170: 421983199
+      PixelPackTOPDOWN8BIT_171: 175223684
+      PixelPackTOPDOWN8BIT_172: -1990471637
+      PixelPackTOPDOWN8BIT_173: 1743454003
+      PixelPackTOPDOWN8BIT_174: -123064369
+      PixelPackTOPDOWN8BIT_175: 2034935834
+      PixelPackTOPDOWN8BIT_176: -853915222
+      PixelPackTOPDOWN8BIT_177: 922389148
+      PixelPackTOPDOWN8BIT_178: 700051179
+      PixelPackTOPDOWN8BIT_179: -1144898477
+      PixelPackTOPDOWN8BIT_18: 1923200149
+      PixelPackTOPDOWN8BIT_180: -2004130440
+      PixelPackTOPDOWN8BIT_181: -2029655710
+      PixelPackTOPDOWN8BIT_182: -1643854318
+      PixelPackTOPDOWN8BIT_183: 1483103163
+      PixelPackTOPDOWN8BIT_184: -800997565
+      PixelPackTOPDOWN8BIT_185: 887094904
+      PixelPackTOPDOWN8BIT_186: 732367858
+      PixelPackTOPDOWN8BIT_187: -698655029
+      PixelPackTOPDOWN8BIT_188: -538043159
+      PixelPackTOPDOWN8BIT_189: 1721925961
+      PixelPackTOPDOWN8BIT_19: -1302032018
+      PixelPackTOPDOWN8BIT_190: -375344545
+      PixelPackTOPDOWN8BIT_191: -1432514114
+      PixelPackTOPDOWN8BIT_192: -438669582
+      PixelPackTOPDOWN8BIT_193: 1091358244
+      PixelPackTOPDOWN8BIT_194: 1346616334
+      PixelPackTOPDOWN8BIT_195: 2041859292
+      PixelPackTOPDOWN8BIT_196: -1328678164
+      PixelPackTOPDOWN8BIT_197: -1284182573
+      PixelPackTOPDOWN8BIT_198: 1429120048
+      PixelPackTOPDOWN8BIT_199: -737976798
+      PixelPackTOPDOWN8BIT_20: 1390503301
+      PixelPackTOPDOWN8BIT_200: 625788509
+      PixelPackTOPDOWN8BIT_201: -1735370359
+      PixelPackTOPDOWN8BIT_202: 1156329123
+      PixelPackTOPDOWN8BIT_203: 826053723
+      PixelPackTOPDOWN8BIT_204: -1225761603
+      PixelPackTOPDOWN8BIT_205: 767056019
+      PixelPackTOPDOWN8BIT_206: 1216576533
+      PixelPackTOPDOWN8BIT_207: 546196213
+      PixelPackTOPDOWN8BIT_208: -814432807
+      PixelPackTOPDOWN8BIT_209: 950308163
+      PixelPackTOPDOWN8BIT_21: 323063836
+      PixelPackTOPDOWN8BIT_210: -1556058765
+      PixelPackTOPDOWN8BIT_211: 1765128297
+      PixelPackTOPDOWN8BIT_212: -646825294
+      PixelPackTOPDOWN8BIT_213: 1547365309
+      PixelPackTOPDOWN8BIT_214: 2029616512
+      PixelPackTOPDOWN8BIT_215: -995639183
+      PixelPackTOPDOWN8BIT_216: 764212820
+      PixelPackTOPDOWN8BIT_217: -1466815244
+      PixelPackTOPDOWN8BIT_218: -309730015
+      PixelPackTOPDOWN8BIT_219: -1486368449
+      PixelPackTOPDOWN8BIT_22: 298697370
+      PixelPackTOPDOWN8BIT_220: 1556486615
+      PixelPackTOPDOWN8BIT_221: 403373772
+      PixelPackTOPDOWN8BIT_222: -1418797126
+      PixelPackTOPDOWN8BIT_223: 1614465261
+      PixelPackTOPDOWN8BIT_224: 1596466128
+      PixelPackTOPDOWN8BIT_225: -1337195539
+      PixelPackTOPDOWN8BIT_226: 673095883
+      PixelPackTOPDOWN8BIT_227: 1326416189
+      PixelPackTOPDOWN8BIT_228: 715804355
+      PixelPackTOPDOWN8BIT_229: -486165086
+      PixelPackTOPDOWN8BIT_23: 1139577051
+      PixelPackTOPDOWN8BIT_230: -91122520
+      PixelPackTOPDOWN8BIT_231: 43229600
+      PixelPackTOPDOWN8BIT_232: 771359536
+      PixelPackTOPDOWN8BIT_233: 416762565
+      PixelPackTOPDOWN8BIT_234: 1218330218
+      PixelPackTOPDOWN8BIT_235: 1651824971
+      PixelPackTOPDOWN8BIT_236: 1299481666
+      PixelPackTOPDOWN8BIT_237: 2072757951
+      PixelPackTOPDOWN8BIT_238: -937321269
+      PixelPackTOPDOWN8BIT_239: 1473791816
+      PixelPackTOPDOWN8BIT_24: -364214042
+      PixelPackTOPDOWN8BIT_240: -449886084
+      PixelPackTOPDOWN8BIT_241: 827424033
+      PixelPackTOPDOWN8BIT_242: -1041936465
+      PixelPackTOPDOWN8BIT_243: 1429876798
+      PixelPackTOPDOWN8BIT_244: 1659160150
+      PixelPackTOPDOWN8BIT_245: -360383998
+      PixelPackTOPDOWN8BIT_246: 1569763385
+      PixelPackTOPDOWN8BIT_247: -845486638
+      PixelPackTOPDOWN8BIT_248: -1817842457
+      PixelPackTOPDOWN8BIT_249: 1387462774
+      PixelPackTOPDOWN8BIT_25: -487796910
+      PixelPackTOPDOWN8BIT_250: -89695535
+      PixelPackTOPDOWN8BIT_251: -1752703405
+      PixelPackTOPDOWN8BIT_252: -155326712
+      PixelPackTOPDOWN8BIT_253: -125915376
+      PixelPackTOPDOWN8BIT_254: 1351440218
+      PixelPackTOPDOWN8BIT_255: 592914159
+      PixelPackTOPDOWN8BIT_256: 988828528
+      PixelPackTOPDOWN8BIT_257: -1976340564
+      PixelPackTOPDOWN8BIT_258: 451639151
+      PixelPackTOPDOWN8BIT_259: 1426017780
+      PixelPackTOPDOWN8BIT_26: 1561954533
+      PixelPackTOPDOWN8BIT_260: 1958721705
+      PixelPackTOPDOWN8BIT_261: -1049919774
+      PixelPackTOPDOWN8BIT_262: 2146378254
+      PixelPackTOPDOWN8BIT_263: -468872992
+      PixelPackTOPDOWN8BIT_264: -2001651941
+      PixelPackTOPDOWN8BIT_265: -960137349
+      PixelPackTOPDOWN8BIT_266: -2026478419
+      PixelPackTOPDOWN8BIT_267: 783532915
+      PixelPackTOPDOWN8BIT_268: 1911989830
+      PixelPackTOPDOWN8BIT_269: -1533923056
+      PixelPackTOPDOWN8BIT_27: 631249813
+      PixelPackTOPDOWN8BIT_270: 1949876097
+      PixelPackTOPDOWN8BIT_271: 137866373
+      PixelPackTOPDOWN8BIT_272: 2071612150
+      PixelPackTOPDOWN8BIT_273: -1653151808
+      PixelPackTOPDOWN8BIT_274: -1120110866
+      PixelPackTOPDOWN8BIT_275: 1252056021
+      PixelPackTOPDOWN8BIT_276: 1768751967
+      PixelPackTOPDOWN8BIT_277: 380475037
+      PixelPackTOPDOWN8BIT_278: 58428489
+      PixelPackTOPDOWN8BIT_279: 439427030
+      PixelPackTOPDOWN8BIT_28: 37918382
+      PixelPackTOPDOWN8BIT_280: 782925856
+      PixelPackTOPDOWN8BIT_281: 1945656452
+      PixelPackTOPDOWN8BIT_282: 21374586
+      PixelPackTOPDOWN8BIT_283: -317494042
+      PixelPackTOPDOWN8BIT_284: -1417699230
+      PixelPackTOPDOWN8BIT_285: 1106651997
+      PixelPackTOPDOWN8BIT_286: -24467276
+      PixelPackTOPDOWN8BIT_287: -806343497
+      PixelPackTOPDOWN8BIT_288: 1822063837
+      PixelPackTOPDOWN8BIT_289: 674334146
+      PixelPackTOPDOWN8BIT_29: 2027075669
+      PixelPackTOPDOWN8BIT_290: -868774100
+      PixelPackTOPDOWN8BIT_291: -721171233
+      PixelPackTOPDOWN8BIT_292: 1373049205
+      PixelPackTOPDOWN8BIT_293: 844667492
+      PixelPackTOPDOWN8BIT_294: 604735175
+      PixelPackTOPDOWN8BIT_295: -838568067
+      PixelPackTOPDOWN8BIT_296: 919793664
+      PixelPackTOPDOWN8BIT_297: -1292246851
+      PixelPackTOPDOWN8BIT_298: -682847583
+      PixelPackTOPDOWN8BIT_299: -1620349116
+      PixelPackTOPDOWN8BIT_30: 1294246289
+      PixelPackTOPDOWN8BIT_300: -739380853
+      PixelPackTOPDOWN8BIT_301: 535419473
+      PixelPackTOPDOWN8BIT_302: -1596270428
+      PixelPackTOPDOWN8BIT_303: -815558880
+      PixelPackTOPDOWN8BIT_304: 986547207
+      PixelPackTOPDOWN8BIT_305: 1276793571
+      PixelPackTOPDOWN8BIT_306: -700924192
+      PixelPackTOPDOWN8BIT_307: -1756041276
+      PixelPackTOPDOWN8BIT_308: 1963448124
+      PixelPackTOPDOWN8BIT_309: -1006868723
+      PixelPackTOPDOWN8BIT_310: -335115445
+      PixelPackTOPDOWN8BIT_311: 1314040340
+      PixelPackTOPDOWN8BIT_312: -1388764771
+      PixelPackTOPDOWN8BIT_313: -1292265783
+      PixelPackTOPDOWN8BIT_314: 1131180688
+      PixelPackTOPDOWN8BIT_315: -780844885
+      PixelPackTOPDOWN8BIT_316: 1172893003
+      PixelPackTOPDOWN8BIT_317: -739072425
+      PixelPackTOPDOWN8BIT_318: -315210799
+      PixelPackTOPDOWN8BIT_319: 1807361469
+      PixelPackTOPDOWN8BIT_320: 1709756823
+      PixelPackTOPDOWN8BIT_321: 1424796346
+      PixelPackTOPDOWN8BIT_322: -305838600
+      PixelPackTOPDOWN8BIT_323: 109229144
+      PixelPackTOPDOWN8BIT_324: 1937064833
+      PixelPackTOPDOWN8BIT_325: -1345124382
+      PixelPackTOPDOWN8BIT_326: 1073866695
+      PixelPackTOPDOWN8BIT_327: -1684743559
+      PixelPackTOPDOWN8BIT_328: -1985334113
+      PixelPackTOPDOWN8BIT_329: -897993549
+      PixelPackTOPDOWN8BIT_330: 1045381587
+      PixelPackTOPDOWN8BIT_331: -118980241
+      PixelPackTOPDOWN8BIT_332: -1636586418
+      PixelPackTOPDOWN8BIT_333: -639799475
+      PixelPackTOPDOWN8BIT_334: -44073205
+      PixelPackTOPDOWN8BIT_335: -1384463240
+      PixelPackTOPDOWN8BIT_336: 1729940812
+      PixelPackTOPDOWN8BIT_337: 2139877976
+      PixelPackTOPDOWN8BIT_338: -1121902504
+      PixelPackTOPDOWN8BIT_339: 1899009112
+      PixelPackTOPDOWN8BIT_34: -1125658260
+      PixelPackTOPDOWN8BIT_340: -509623034
+      PixelPackTOPDOWN8BIT_341: 2094844620
+      PixelPackTOPDOWN8BIT_342: -990476864
+      PixelPackTOPDOWN8BIT_343: -1509471006
+      PixelPackTOPDOWN8BIT_344: -1417688453
+      PixelPackTOPDOWN8BIT_345: 855817172
+      PixelPackTOPDOWN8BIT_346: 1247811986
+      PixelPackTOPDOWN8BIT_347: 917468429
+      PixelPackTOPDOWN8BIT_348: -383909007
+      PixelPackTOPDOWN8BIT_349: -576168955
+      PixelPackTOPDOWN8BIT_35: -356705858
+      PixelPackTOPDOWN8BIT_350: -1174330927
+      PixelPackTOPDOWN8BIT_351: 807143604
+      PixelPackTOPDOWN8BIT_352: -976362060
+      PixelPackTOPDOWN8BIT_353: 1319275894
+      PixelPackTOPDOWN8BIT_354: -273931121
+      PixelPackTOPDOWN8BIT_355: -809508253
+      PixelPackTOPDOWN8BIT_356: -465140397
+      PixelPackTOPDOWN8BIT_357: -324841961
+      PixelPackTOPDOWN8BIT_358: 1427173687
+      PixelPackTOPDOWN8BIT_359: 415789567
+      PixelPackTOPDOWN8BIT_36: 292617791
+      PixelPackTOPDOWN8BIT_360: 200940248
+      PixelPackTOPDOWN8BIT_361: -1186170758
+      PixelPackTOPDOWN8BIT_362: -1920665836
+      PixelPackTOPDOWN8BIT_363: -962372615
+      PixelPackTOPDOWN8BIT_364: 1055210912
+      PixelPackTOPDOWN8BIT_365: 495151194
+      PixelPackTOPDOWN8BIT_366: -1661584252
+      PixelPackTOPDOWN8BIT_367: 1513577068
+      PixelPackTOPDOWN8BIT_368: -1939472394
+      PixelPackTOPDOWN8BIT_369: -1935046718
+      PixelPackTOPDOWN8BIT_37: -547541745
+      PixelPackTOPDOWN8BIT_370: -318582216
+      PixelPackTOPDOWN8BIT_371: 1700147260
+      PixelPackTOPDOWN8BIT_372: -1659237908
+      PixelPackTOPDOWN8BIT_373: -1404235192
+      PixelPackTOPDOWN8BIT_374: 835965455
+      PixelPackTOPDOWN8BIT_375: 1074514561
+      PixelPackTOPDOWN8BIT_376: -395333122
+      PixelPackTOPDOWN8BIT_377: -1333252074
+      PixelPackTOPDOWN8BIT_378: 1298865540
+      PixelPackTOPDOWN8BIT_379: 1694194967
+      PixelPackTOPDOWN8BIT_38: 2071161897
+      PixelPackTOPDOWN8BIT_380: 1880838071
+      PixelPackTOPDOWN8BIT_381: 771749098
+      PixelPackTOPDOWN8BIT_382: -1381238267
+      PixelPackTOPDOWN8BIT_383: -1753462305
+      PixelPackTOPDOWN8BIT_384: 1530422963
+      PixelPackTOPDOWN8BIT_385: -358449034
+      PixelPackTOPDOWN8BIT_386: -1175405034
+      PixelPackTOPDOWN8BIT_39: 1538061142
+      PixelPackTOPDOWN8BIT_395: 1530748411
+      PixelPackTOPDOWN8BIT_396: -345810395
+      PixelPackTOPDOWN8BIT_397: -1462504858
+      PixelPackTOPDOWN8BIT_398: 1792556315
+      PixelPackTOPDOWN8BIT_399: 1819616685
+      PixelPackTOPDOWN8BIT_40: 1374679639
+      PixelPackTOPDOWN8BIT_400: 1576475421
+      PixelPackTOPDOWN8BIT_401: 1122276565
+      PixelPackTOPDOWN8BIT_402: 47267273
+      PixelPackTOPDOWN8BIT_41: 1167424369
+      PixelPackTOPDOWN8BIT_411: 331292618
+      PixelPackTOPDOWN8BIT_412: -237100805
+      PixelPackTOPDOWN8BIT_413: 508348680
+      PixelPackTOPDOWN8BIT_414: 486930862
+      PixelPackTOPDOWN8BIT_415: -841740336
+      PixelPackTOPDOWN8BIT_416: -1146306603
+      PixelPackTOPDOWN8BIT_417: -1822485869
+      PixelPackTOPDOWN8BIT_418: -927449902
+      PixelPackTOPDOWN8BIT_42: -692816513
+      PixelPackTOPDOWN8BIT_420: -1931960823
+      PixelPackTOPDOWN8BIT_421: -1344089237
+      PixelPackTOPDOWN8BIT_422: -164863601
+      PixelPackTOPDOWN8BIT_423: 434510487
+      PixelPackTOPDOWN8BIT_424: 227983002
+      PixelPackTOPDOWN8BIT_425: 1815683794
+      PixelPackTOPDOWN8BIT_426: 1702264150
+      PixelPackTOPDOWN8BIT_427: 2018209289
+      PixelPackTOPDOWN8BIT_428: -57280411
+      PixelPackTOPDOWN8BIT_429: 1886824529
+      PixelPackTOPDOWN8BIT_43: -233675780
+      PixelPackTOPDOWN8BIT_430: -790679882
+      PixelPackTOPDOWN8BIT_431: -1499016444
+      PixelPackTOPDOWN8BIT_432: -121028625
+      PixelPackTOPDOWN8BIT_433: 476811247
+      PixelPackTOPDOWN8BIT_434: 1675106289
+      PixelPackTOPDOWN8BIT_436: -1684207229
+      PixelPackTOPDOWN8BIT_437: 1331592473
+      PixelPackTOPDOWN8BIT_438: 819989253
+      PixelPackTOPDOWN8BIT_439: -1824540483
+      PixelPackTOPDOWN8BIT_44: 1054443742
+      PixelPackTOPDOWN8BIT_440: 1405825905
+      PixelPackTOPDOWN8BIT_441: 1449884967
+      PixelPackTOPDOWN8BIT_442: 1697150561
+      PixelPackTOPDOWN8BIT_443: -1533304481
+      PixelPackTOPDOWN8BIT_444: 1480690774
+      PixelPackTOPDOWN8BIT_445: 811202659
+      PixelPackTOPDOWN8BIT_446: -90660210
+      PixelPackTOPDOWN8BIT_447: -2026564524
+      PixelPackTOPDOWN8BIT_448: 285365906
+      PixelPackTOPDOWN8BIT_449: -2017068866
+      PixelPackTOPDOWN8BIT_45: -1229630655
+      PixelPackTOPDOWN8BIT_450: -1517154208
+      PixelPackTOPDOWN8BIT_451: -1979758959
+      PixelPackTOPDOWN8BIT_452: 1161822771
+      PixelPackTOPDOWN8BIT_453: 424387659
+      PixelPackTOPDOWN8BIT_454: 705735496
+      PixelPackTOPDOWN8BIT_455: -1171983810
+      PixelPackTOPDOWN8BIT_456: -2125261986
+      PixelPackTOPDOWN8BIT_457: -548345250
+      PixelPackTOPDOWN8BIT_458: 1067196462
+      PixelPackTOPDOWN8BIT_459: 104671280
+      PixelPackTOPDOWN8BIT_46: -1787850693
+      PixelPackTOPDOWN8BIT_460: -285586956
+      PixelPackTOPDOWN8BIT_461: 315156897
+      PixelPackTOPDOWN8BIT_462: 1483111182
+      PixelPackTOPDOWN8BIT_463: -1371076981
+      PixelPackTOPDOWN8BIT_464: 1979245235
+      PixelPackTOPDOWN8BIT_465: 1333320154
+      PixelPackTOPDOWN8BIT_466: -1034481551
+      PixelPackTOPDOWN8BIT_467: -1980746426
+      PixelPackTOPDOWN8BIT_468: -371852593
+      PixelPackTOPDOWN8BIT_469: 574818671
+      PixelPackTOPDOWN8BIT_470: 1498796256
+      PixelPackTOPDOWN8BIT_471: -687781962
+      PixelPackTOPDOWN8BIT_472: -1426558402
+      PixelPackTOPDOWN8BIT_473: 1383227671
+      PixelPackTOPDOWN8BIT_474: -1124319342
+      PixelPackTOPDOWN8BIT_475: -17783168
+      PixelPackTOPDOWN8BIT_5: -2088140057
+      PixelPackTOPDOWN8BIT_50: 1256162014
+      PixelPackTOPDOWN8BIT_51: -2124971584
+      PixelPackTOPDOWN8BIT_52: -1755592579
+      PixelPackTOPDOWN8BIT_53: -689048713
+      PixelPackTOPDOWN8BIT_54: 838100927
+      PixelPackTOPDOWN8BIT_55: 95124500
+      PixelPackTOPDOWN8BIT_56: 139002693
+      PixelPackTOPDOWN8BIT_57: -1544219706
+      PixelPackTOPDOWN8BIT_58: -2135802118
+      PixelPackTOPDOWN8BIT_59: 1047999151
+      PixelPackTOPDOWN8BIT_6: -1437378670
+      PixelPackTOPDOWN8BIT_60: -1947961422
+      PixelPackTOPDOWN8BIT_61: -1589936817
+      PixelPackTOPDOWN8BIT_62: -66405809
+      PixelPackTOPDOWN8BIT_63: 251560528
+      PixelPackTOPDOWN8BIT_64: 1244310557
+      PixelPackTOPDOWN8BIT_65: 574987052
+      PixelPackTOPDOWN8BIT_66: 50574420
+      PixelPackTOPDOWN8BIT_67: 594786069
+      PixelPackTOPDOWN8BIT_68: -175178992
+      PixelPackTOPDOWN8BIT_69: -1749034106
+      PixelPackTOPDOWN8BIT_7: 1042654719
+      PixelPackTOPDOWN8BIT_70: -1634324792
+      PixelPackTOPDOWN8BIT_71: -709368965
+      PixelPackTOPDOWN8BIT_72: -1512300923
+      PixelPackTOPDOWN8BIT_73: -622485412
+      PixelPackTOPDOWN8BIT_74: -1879726524
+      PixelPackTOPDOWN8BIT_75: -2096892947
+      PixelPackTOPDOWN8BIT_76: -1812661939
+      PixelPackTOPDOWN8BIT_77: -1822365939
+      PixelPackTOPDOWN8BIT_78: -2065347292
+      PixelPackTOPDOWN8BIT_79: 226464559
+      PixelPackTOPDOWN8BIT_8: 1979036822
+      PixelPackTOPDOWN8BIT_80: -849949710
+      PixelPackTOPDOWN8BIT_81: -1354097549
+      PixelPackTOPDOWN8BIT_82: -2144316520
+      PixelPackTOPDOWN8BIT_83: -644793561
+      PixelPackTOPDOWN8BIT_84: 327506214
+      PixelPackTOPDOWN8BIT_85: -1079960531
+      PixelPackTOPDOWN8BIT_86: 724951411
+      PixelPackTOPDOWN8BIT_87: -337648201
+      PixelPackTOPDOWN8BIT_88: -1886116142
+      PixelPackTOPDOWN8BIT_89: -334544798
+      PixelPackTOPDOWN8BIT_9: 1105825546
+      PixelPackTOPDOWN8BIT_90: 651659567
+      PixelPackTOPDOWN8BIT_91: 208349542
+      PixelPackTOPDOWN8BIT_92: -93796113
+      PixelPackTOPDOWN8BIT_93: -1022230834
+      PixelPackTOPDOWN8BIT_94: 581911107
+      PixelPackTOPDOWN8BIT_95: 1149187554
+      PixelPackTOPDOWN8BIT_96: 40557814
+      PixelPackTOPDOWN8BIT_97: 93858130
+      PixelPackTOPDOWN8BIT_98: -131696446
+      PixelPackTOPDOWN8BIT_99: 1564691952
+      Stair_Narrow: 1242567363
+      Stair_Wide: 1301999291
+      Stair_Wide_L: -1451901143
+      Stair_Wide_R: 816283041
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
